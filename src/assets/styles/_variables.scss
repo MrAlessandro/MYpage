@@ -1,0 +1,20 @@
+/* BREAKPOINTS */
+$MY-sm: 640px;
+$MY-md: 768px;
+$MY-lg: 1024px;
+$MY-xl: 1280px;
+$MY-xxl: 1536px;
+
+/* CONTAINERS SIZES AND SPACINGS */
+$MY-container-max-widths: (
+    'sm': $MY-sm,
+    'md': $MY-md,
+    'lg': $MY-lg,
+    'xl': $MY-xl,
+    'xxl': $MY-xxl
+);
+
+$MY-container-horizontal-padding: 1rem;
+/*********************************/
+
+

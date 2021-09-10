@@ -1,30 +1,30 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="MY:main-navbar">
+    <div class="MY:container">
+      <template v-for="item in routes" :key="item.path">
+        <router-link :to="item.path">{{ item.name }}</router-link>
+      </template>
+    </div>
   </div>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { Vue } from 'vue-class-component'
+import { RouteRecordRaw } from 'vue-router'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default class App extends Vue {
+  get routes (): Array<RouteRecordRaw> {
+    return this.$router.options.routes
   }
+}
+</script>
+
+<style lang="scss">
+$MY-main-navbar-vertical-padding: 1rem;
+
+.MY\:main-navbar {
+  padding-top: $MY-main-navbar-vertical-padding;
+  padding-bottom: $MY-main-navbar-vertical-padding;
 }
 </style>
