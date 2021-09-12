@@ -1,18 +1,20 @@
-/* MAJOR MONO DISPLAY */
+/* EVERSON MONO */
 @font-face {
-    font-family: 'Major Mono Display';
-    src: url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.eot');
-    src: local('Major Mono Display Regular'), local('MajorMonoDisplay-Regular'),
-    url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.woff2') format('woff2'),
-    url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.woff') format('woff'),
-    url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.ttf') format('truetype'),
-    url('../fonts/MajorMonoDisplay/MajorMonoDisplay-Regular.svg#MajorMonoDisplay-Regular') format('svg');
+    font-family: 'Everson Mono Latin 6';
+    src: url('../fonts/EversonMono/EversonMonoLatin.eot');
+    src: local('../fonts/EversonMono/Everson Mono Latin 6'), local('EversonMonoLatin6'),
+    url('../fonts/EversonMono/EversonMonoLatin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/EversonMono/EversonMonoLatin.woff2') format('woff2'),
+    url('../fonts/EversonMono/EversonMonoLatin.woff') format('woff'),
+    url('../fonts/EversonMono/EversonMonoLatin.ttf') format('truetype'),
+    url('../fonts/EversonMono/EversonMonoLatin.svg#EversonMonoLatin6') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-/*********************/
+
+
+/****************/
 
 /* SOURCE SANS PRO */
 @font-face {
