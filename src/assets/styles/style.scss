@@ -1,14 +1,15 @@
 @import "reset";
-@import "typogrphy";
+@import "typography";
 @import "variables";
 @import "mixins";
 @import "components";
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1rem;
+    @include MY-background-gardient();
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Everson Mono Latin 6', sans-serif;
+#MY\:application-root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

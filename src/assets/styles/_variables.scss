@@ -4,21 +4,46 @@ $MY-md: 768px;
 $MY-lg: 1024px;
 $MY-xl: 1280px;
 $MY-xxl: 1536px;
+/***************/
 
 /* CONTAINERS SIZES AND SPACINGS */
 $MY-container-max-widths: (
-    'sm': $MY-sm,
-    'md': $MY-md,
-    'lg': $MY-lg,
-    'xl': $MY-xl,
-    'xxl': $MY-xxl
+        'sm': $MY-sm,
+        'md': $MY-md,
+        'lg': $MY-lg,
+        'xl': $MY-xl,
+        'xxl': $MY-xxl
 );
 
 $MY-container-horizontal-padding: 1rem;
 /*********************************/
 
 /* COLORS */
-$MY-primary-color: #000000
+$MY-black: #000000FF; // rgba(0, 0, 0, 1);
+$MY-space-cadet: #283048FF; // rgba(40, 48, 72, 1)
+$MY-cadet-grey: #859398FF; // rgba(133, 147, 152, 1)
+$MY-white: #FFFFFFFF; // rgba(255, 255, 255, 1)
+$MY-yellow-green: #98CE00FF; // rgba(152, 206, 0, 1)
+$MY-cyber-yellow: #FFCF00FF; // rgba(255, 207, 0, 1)
 /**********/
 
+/* ANIMATIONS */
+$MY-animations-duration-short: 200ms;
+$MY-animations-duration-medium: 300ms;
+$MY-animations-duration-long: 400ms;
+$MY-animations-style: ease-in-out;
+/**************/
 
+/* FONT SIZES */
+$MY-font-size-xxl: 11.089rem;
+$MY-font-size-xl: 6.854rem;
+$MY-font-size-lg: 4.236rem;
+$MY-font-size-md: 2.618rem;
+$MY-font-size-sm: 1.618rem;
+$MY-font-size-xs: 1rem;
+$MY-font-size-xxs: 0.618rem;
+/**************/
+
+/* SCROLBAR VALUES */
+$MY-scrollbar-width: 1rem;
+/*******************/

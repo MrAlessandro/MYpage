@@ -1,8 +1,11 @@
+@import "~rfs/scss";
+@import "variables";
+
 /* CONTAINER */
 .MY\:container {
     width: 100%;
-    padding-right: $MY-container-horizontal-padding;
-    padding-left: $MY-container-horizontal-padding;
+    @include padding-left($MY-container-horizontal-padding);
+    @include padding-right($MY-container-horizontal-padding);
     margin-right: auto;
     margin-left: auto;
 

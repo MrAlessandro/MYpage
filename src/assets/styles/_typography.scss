@@ -1,3 +1,6 @@
+@import "variables";
+@import "~rfs/scss";
+
 /* EVERSON MONO */
 @font-face {
     font-family: 'Everson Mono Latin 6';
@@ -184,4 +187,90 @@
     font-style: normal;
     font-display: swap;
 }
+
 /*********************/
+
+/* TEXT SIZES */
+.MY\:text-xxl {
+    @include font-size($MY-font-size-xxl);
+}
+
+.MY\:text-xl {
+    @include font-size($MY-font-size-xl);
+}
+
+.MY\:text-lg {
+    @include font-size($MY-font-size-lg);
+}
+
+.MY\:text-md {
+    @include font-size($MY-font-size-md);
+}
+
+.MY\:text-sm {
+    @include font-size($MY-font-size-sm);
+}
+
+.MY\:text-xs {
+    @include font-size($MY-font-size-xs);
+}
+
+.MY\:text-xxs {
+    @include font-size($MY-font-size-xxs);
+}
+
+/**************/
+
+/* TEXT COLORS */
+.MY\:text-black {
+    color: $MY-black;
+}
+
+.MY\:text-space-cadet {
+    color: $MY-space-cadet;
+}
+
+.MY\:text-cadet-gray {
+    color: $MY-cadet-grey;
+}
+
+.MY\:text-white {
+    color: $MY-white;
+}
+
+.MY\:text-yellow-green {
+    color: $MY-yellow-green;
+}
+
+.MY\:text-cyber-yellow {
+    color: $MY-cyber-yellow;
+}
+/***************/
+
+
+/* TITLES */
+.MY\:title-1 {
+    @extend .MY\:text-xxl;
+}
+
+.MY\:title-2 {
+    @extend .MY\:text-xl;
+}
+
+.MY\:title-3 {
+    @extend .MY\:text-lg;
+}
+
+/**********/
+
+/* HTML ELEMENTS DEFAULT FONTS */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Everson Mono Latin 6', sans-serif;
+}
+
+/*******************************/
+
