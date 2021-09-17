@@ -12,16 +12,16 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component'
+import MYvue from '@/lib/MYvue'
 import { RouteRecordRaw } from 'vue-router'
-import { Prop } from 'vue-property-decorator'
 import { EscrollState } from '@/lib/interfaces/EscrollState'
+import { Prop } from 'vue-property-decorator'
 
-export default class MYMainNavbar extends Vue {
+export default class MYMainNavbar extends MYvue {
   @Prop() readonly homepageScrollTop!: EscrollState
 
   get isHomepageTop (): boolean {
-    return this.homepageScrollTop === EscrollState.TOP
+    return this.homepageScrollTop === EscrollState.TOP && this.$route.path === '/'
   }
 
   get routes (): Array<RouteRecordRaw> {
@@ -36,6 +36,11 @@ export default class MYMainNavbar extends Vue {
 $MY-main-navbar-vertical-padding: 1rem;
 
 .MY\:main-navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
   .MY\:container {
     display: flex;
     justify-content: space-between;
@@ -58,12 +63,13 @@ $MY-main-navbar-vertical-padding: 1rem;
     }
 
     .MY\:main-navbar-brand-logo {
-      width: 60px;
-      height: 36px;
+      width: $MY-main-navbar-logo-width;
+      height: $MY-main-navbar-logo-height;
 
       background-position: center;
       background-size: contain;
       background-image: url("../assets/illustrations/MYlogo.svg");
+      background-repeat: no-repeat;
 
       transition: transform $MY-animations-duration-medium $MY-animations-style,
       transform-origin $MY-animations-duration-medium $MY-animations-style;

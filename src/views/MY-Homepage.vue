@@ -1,5 +1,5 @@
 <template>
-  <main @scroll="onScroll()">
+  <main>
     <section class="MY:homepage-hero MY:container">
       <div class="MY:homepage-hero-title">
         <h1 class="MY:title-2 MY:text-yellow-green">{{ mainTitle }}</h1>
@@ -107,39 +107,11 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component'
-import { EscrollState } from '@/lib/interfaces/EscrollState'
-import { MYChangeScrollStateEvent, MYonChangeHomepageScrollStateEventName } from '@/lib/Events'
-import { Watch, Emit } from 'vue-property-decorator'
+import MYview from '@/lib/MYview'
 
-export default class MYHomepage extends Vue {
+export default class MYHomepage extends MYview {
   private mainTitle = 'Hello World!'
   private subtitle = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-  private viewRoot: Element | null = null
-  private scrollState: EscrollState = EscrollState.UNSET
-
-  mounted (): void {
-    this.viewRoot = document.querySelector('#MY\\:view-root')
-    this.onScroll()
-  }
-
-  @Emit(MYonChangeHomepageScrollStateEventName)
-  notifyScrollStateChange (): MYChangeScrollStateEvent {
-    return new MYChangeScrollStateEvent(this.scrollState)
-  }
-
-  @Watch('scrollState')
-  onScrollStateChange (): void {
-    this.notifyScrollStateChange()
-  }
-
-  isScrollTop (): boolean {
-    return this.viewRoot?.scrollTop === 0
-  }
-
-  onScroll (): void {
-    this.scrollState = this.isScrollTop() ? EscrollState.TOP : EscrollState.BELOW
-  }
 }
 </script>
 

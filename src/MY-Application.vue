@@ -1,13 +1,12 @@
 <template>
-  <MY-main-navbar :homepage-scroll-top="homepageScrollState"></MY-main-navbar>
-  <router-view id="MY:view-root" class="MY:view-space" v-on:mounted="initializeScrollbar()"
-               v-on:[homepageScrollStateChangeEventName]="onHomePageScrollStateChange"/>
+  <MY-main-navbar @mounted="onNavbarMounted" :homepage-scroll-top="homepageScrollState"></MY-main-navbar>
+  <router-view id="MY:view-root" class="MY:view-space" :navbar-placeholder-height="mainNavbarHeight"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import MYMainNavbar from '@/components/MY-MainNavbar.vue'
-import { MYChangeScrollStateEvent, MYonChangeHomepageScrollStateEventName } from '@/lib/Events'
+import { MYonChangeHomepageScrollStateEventName } from '@/lib/Events'
 import { EscrollState } from '@/lib/interfaces/EscrollState'
 
 @Options({
@@ -17,11 +16,23 @@ import { EscrollState } from '@/lib/interfaces/EscrollState'
 })
 export default class MYApplication extends Vue {
   private homepageScrollStateChangeEventName = MYonChangeHomepageScrollStateEventName
-  private homepageScrollState = EscrollState.UNSET
-  private scrollbarShowTimer!: number
+  private homepageScrollState = EscrollState.TOP
+  private mainNavbarHeight = 0
 
-  onHomePageScrollStateChange (changeScrollStateEvent: MYChangeScrollStateEvent): void {
-    this.homepageScrollState = changeScrollStateEvent.scrollState
+  mounted (): void {
+    document.addEventListener('scroll', this.onScroll)
+  }
+
+  onNavbarMounted (navbar: HTMLElement): void {
+    this.mainNavbarHeight = navbar.offsetHeight
+  }
+
+  isScrollTop (): boolean {
+    return window.scrollY === 0
+  }
+
+  onScroll (): void {
+    this.homepageScrollState = this.isScrollTop() ? EscrollState.TOP : EscrollState.BELOW
   }
 }
 </script>
@@ -30,8 +41,5 @@ export default class MYApplication extends Vue {
 @import "assets/styles/variables";
 
 .MY\:view-space {
-  position: relative;
-  flex-grow: 1;
-  overflow-y: auto;
 }
 </style>
