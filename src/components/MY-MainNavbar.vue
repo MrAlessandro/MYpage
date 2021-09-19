@@ -6,7 +6,8 @@
           <router-link class="MY:main-navbar-link" :to="item.path">{{ item.name }}</router-link>
         </template>
       </div>
-      <div class="MY:main-navbar-brand-logo" :class="{'MY\:scroll-top': isHomepageTop}"></div>
+<!--      <div class="MY:main-navbar-brand-logo" :class="{'MY\:scroll-top': isHomepageTop}"></div>-->
+      <MYlogo></MYlogo>
     </div>
   </header>
 </template>
@@ -16,6 +17,7 @@ import MYvue from '@/lib/MYvue'
 import { RouteRecordRaw } from 'vue-router'
 import { EscrollState } from '@/lib/interfaces/EscrollState'
 import { Prop } from 'vue-property-decorator'
+import MYlogo from '@/assets/illustrations/MYlogo.svg?inline'
 
 export default class MYMainNavbar extends MYvue {
   @Prop() readonly homepageScrollTop!: EscrollState
@@ -54,7 +56,6 @@ $MY-main-navbar-vertical-padding: 1rem;
         display: block;
         margin-right: 1rem;
         text-decoration: none;
-        color: $MY-black;
 
         &:last-child {
           margin-right: 0;

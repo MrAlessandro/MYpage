@@ -5,7 +5,8 @@
 @import "components";
 
 body {
-    @include MY-background-gardient();
+    background-color: $MY-color-dark;
+    color: $MY-color-light;
 }
 
 #MY\:application-root {
