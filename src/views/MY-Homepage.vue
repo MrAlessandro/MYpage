@@ -2,11 +2,11 @@
   <main>
     <section class="MY:homepage-hero MY:container">
       <div class="MY:homepage-hero-title">
-        <h1 class="MY:title-2 MY:text-yellow-green">{{ mainTitle }}</h1>
+        <h1 class="MY:title-2 MY:text-yellow-green">{{ mainTitleText }}</h1>
       </div>
       <div class="MY:homepage-hero-spacer"></div>
       <div class="MY:homepage-hero-subtitle">
-        <h2 class="MY:title-3">{{ subtitle }}</h2>
+        <h2 class="MY:title-3">{{ mainSubtitleText }}</h2>
       </div>
     </section>
     <section class="MY:container">
@@ -108,10 +108,29 @@
 
 <script lang="ts">
 import MYview from '@/lib/MYview'
+import { MYmainSubtitleText, MYmainTitleText } from '@/assets/resources/MYstrings'
 
 export default class MYHomepage extends MYview {
-  private mainTitle = 'Hello World!'
-  private subtitle = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  private subtitleElement!: HTMLElement
+  private mainTitleText = MYmainTitleText
+  private mainSubtitleText = ''
+  private typingSpeed = 70
+  private timer!: ReturnType<typeof setTimeout>
+  private splittedMainSubtitle = MYmainSubtitleText.split('')
+
+  mounted (): void {
+    this.subtitleElement = this.$el.querySelector('.MY\\:homepage-hero-subtitle h2')
+    this.typingAnimationFrame()
+  }
+
+  typingAnimationFrame (): void {
+    if (this.splittedMainSubtitle.length > 0) {
+      this.mainSubtitleText += this.splittedMainSubtitle.shift()
+    } else {
+      clearTimeout(this.timer)
+    }
+    this.timer = setTimeout(this.typingAnimationFrame, this.typingSpeed)
+  }
 }
 </script>
 
@@ -124,7 +143,7 @@ export default class MYHomepage extends MYview {
   align-items: stretch;
 
   @media (min-width: $MY-xl) {
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 15rem;
   }
 

@@ -3,11 +3,12 @@
     <div class="MY:container">
       <div class="MY:main-navbar-link-box">
         <template v-for="item in routes" :key="item.path">
-          <router-link class="MY:main-navbar-link" :to="item.path">{{ item.name }}</router-link>
+          <router-link class="MY:main-navbar-link MY:text-sm" :to="item.path">
+            {{ item.name }}
+          </router-link>
         </template>
       </div>
-<!--      <div class="MY:main-navbar-brand-logo" :class="{'MY\:scroll-top': isHomepageTop}"></div>-->
-      <MYlogo></MYlogo>
+      <div class="MY:main-navbar-brand-logo" :class="{'MY\:scroll-top': isHomepageTop}"></div>
     </div>
   </header>
 </template>
@@ -17,7 +18,6 @@ import MYvue from '@/lib/MYvue'
 import { RouteRecordRaw } from 'vue-router'
 import { EscrollState } from '@/lib/interfaces/EscrollState'
 import { Prop } from 'vue-property-decorator'
-import MYlogo from '@/assets/illustrations/MYlogo.svg?inline'
 
 export default class MYMainNavbar extends MYvue {
   @Prop() readonly homepageScrollTop!: EscrollState
@@ -42,6 +42,7 @@ $MY-main-navbar-vertical-padding: 1rem;
   left: 0;
   top: 0;
   right: 0;
+  background-color: $MY-color-dark;
 
   .MY\:container {
     display: flex;
@@ -56,9 +57,14 @@ $MY-main-navbar-vertical-padding: 1rem;
         display: block;
         margin-right: 1rem;
         text-decoration: none;
+        color: $MY-color-light;
 
         &:last-child {
           margin-right: 0;
+        }
+
+        &:hover {
+          color: $MY-color-primary-accent;
         }
       }
     }
@@ -75,13 +81,13 @@ $MY-main-navbar-vertical-padding: 1rem;
       transition: transform $MY-animations-duration-medium $MY-animations-style,
       transform-origin $MY-animations-duration-medium $MY-animations-style;
 
-      transform-origin: 100% -31%;
+      transform-origin: 100% -22%;
 
       &.MY\:scroll-top {
         @media (min-width: $MY-xl) {
           pointer-events: none;
           transform: scale(10);
-          transform-origin: 100% -31%;
+          transform-origin: 100% -22%;
         }
       }
 

@@ -1,6 +1,7 @@
 <template>
   <MY-main-navbar @mounted="onNavbarMounted" :homepage-scroll-top="homepageScrollState"></MY-main-navbar>
-  <router-view id="MY:view-root" class="MY:view-space" :navbar-placeholder-height="mainNavbarHeight"/>
+  <div id="MY:main-navbar-placeholder" :style="{height: navbarHeight + 'px'}"></div>
+  <router-view id="MY:view-root" class="MY:view-space"/>
 </template>
 
 <script lang="ts">
@@ -17,14 +18,14 @@ import { EscrollState } from '@/lib/interfaces/EscrollState'
 export default class MYApplication extends Vue {
   private homepageScrollStateChangeEventName = MYonChangeHomepageScrollStateEventName
   private homepageScrollState = EscrollState.TOP
-  private mainNavbarHeight = 0
+  private navbarHeight = 0
 
   mounted (): void {
     document.addEventListener('scroll', this.onScroll)
   }
 
   onNavbarMounted (navbar: HTMLElement): void {
-    this.mainNavbarHeight = navbar.offsetHeight
+    this.navbarHeight = navbar.offsetHeight
   }
 
   isScrollTop (): boolean {
@@ -39,6 +40,10 @@ export default class MYApplication extends Vue {
 
 <style lang="scss">
 @import "assets/styles/variables";
+
+#MY\:main-navbar-placeholder {
+  width: 100%;
+}
 
 .MY\:view-space {
 }
