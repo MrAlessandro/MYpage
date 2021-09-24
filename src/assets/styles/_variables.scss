@@ -1,0 +1,48 @@
+/* BREAKPOINTS */
+$MY-sm: 640px;
+$MY-md: 768px;
+$MY-lg: 1024px;
+$MY-xl: 1280px;
+$MY-xxl: 1536px;
+/***************/
+
+/* CONTAINERS SIZES AND SPACINGS */
+$MY-container-max-widths: (
+        'sm': $MY-sm,
+        'md': $MY-md,
+        'lg': $MY-lg,
+        'xl': $MY-xl,
+        'xxl': $MY-xxl
+);
+
+$MY-container-horizontal-padding: 1rem;
+/*********************************/
+
+/* COLORS */
+$MY-color-dark: #0E0E0EFF;
+$MY-color-light: #FFFBDF;
+$MY-color-primary: #C5AB63;
+$MY-color-primary-accent: #B39542;
+/**********/
+
+/* ANIMATIONS */
+$MY-animations-duration-short: 200ms;
+$MY-animations-duration-medium: 300ms;
+$MY-animations-duration-long: 400ms;
+$MY-animations-style: ease-in-out;
+/**************/
+
+/* FONT SIZES */
+$MY-font-size-xxl: 11.089rem;
+$MY-font-size-xl: 6.854rem;
+$MY-font-size-lg: 4.236rem;
+$MY-font-size-md: 2.618rem;
+$MY-font-size-sm: 1.618rem;
+$MY-font-size-xs: 1rem;
+$MY-font-size-xxs: 0.618rem;
+/**************/
+
+/* NAVBAR LOGO SIZE */
+$MY-main-navbar-logo-width: 60px;
+$MY-main-navbar-logo-height: 36px;
+/*******************/
