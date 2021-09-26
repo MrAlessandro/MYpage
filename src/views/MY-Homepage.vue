@@ -2,11 +2,11 @@
   <main>
     <section class="MY:homepage-hero MY:container">
       <div class="MY:homepage-hero-title">
-        <h1 class="MY:title-2 MY:text-yellow-green" ref="titleElement">{{ titleText }}</h1>
+        <h1 class="MY:title-2 MY:text-primary" ref="titleElement">{{ titleText }}</h1>
       </div>
       <div class="MY:homepage-hero-spacer"></div>
       <div class="MY:homepage-hero-subtitle">
-        <h2 class="MY:title-3" ref="subtitleElement">{{ subtitleText }}</h2>
+        <h2 class="MY:title-3 MY:text-primary" ref="subtitleElement">{{ subtitleText }}</h2>
       </div>
     </section>
     <section class="MY:container">
@@ -107,21 +107,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
-import { MYmainSubtitleText, MYmainTitleText } from '@/assets/resources/MYstrings'
+import {defineComponent, onMounted, ref} from 'vue'
+import {MYmainSubtitleText, MYmainTitleText} from '@/assets/resources/MYstrings'
 
 export default defineComponent({
-  setup () {
+  setup() {
     const titleText = MYmainTitleText
     const typingSpeed = 70 //ms
 
-    let subtitleText = ''
+    let subtitleText = ref('')
     let subtitleBuffer = MYmainSubtitleText.split('')
     let timer!: ReturnType<typeof setTimeout>
 
     const typingAnimationFrame: () => void = () => {
       if (subtitleBuffer.length > 0) {
-        subtitleText += subtitleBuffer.shift()
+        subtitleText.value += subtitleBuffer.shift()
       } else {
         clearTimeout(timer)
       }
@@ -138,29 +138,6 @@ export default defineComponent({
     }
   },
 })
-
-/* export default class MYHomepage extends MYview {
-  private subtitleElement!: HTMLElement
-  private mainTitleText = MYmainTitleText
-  private mainSubtitleText = ''
-  private typingSpeed = 70
-  private timer!: ReturnType<typeof setTimeout>
-  private splittedMainSubtitle = MYmainSubtitleText.split('')
-
-  mounted (): void {
-    this.subtitleElement = this.$el.querySelector('.MY\\:homepage-hero-subtitle h2')
-    this.typingAnimationFrame()
-  }
-
-  typingAnimationFrame (): void {
-    if (this.splittedMainSubtitle.length > 0) {
-      this.mainSubtitleText += this.splittedMainSubtitle.shift()
-    } else {
-      clearTimeout(this.timer)
-    }
-    this.timer = setTimeout(this.typingAnimationFrame, this.typingSpeed)
-  }
-} */
 </script>
 
 <style lang="scss">
@@ -178,6 +155,8 @@ export default defineComponent({
 
   .MY\:homepage-hero-title {
     @media (min-width: $MY-xl) {
+      display: flex;
+      align-items: center;
       width: 50%;
       max-width: 50%;
       height: 360px;
@@ -197,5 +176,9 @@ export default defineComponent({
     width: 100%;
     margin-top: 10rem;
   }
+}
+
+.example {
+  fill: $MY-color-primary;
 }
 </style>

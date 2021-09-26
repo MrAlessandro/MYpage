@@ -11,6 +11,7 @@
     "core-js": "^3.18.0",
     "rfs": "^9.0.6",
     "vue": "^3.2.16",
+    "vue-inline-svg": "github:shrpne/vue-inline-svg#pull/32/head",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
   },

@@ -7,6 +7,10 @@
 body {
     background-color: $MY-color-dark;
     color: $MY-color-light;
+
+    &.MY\:scroll-disabled {
+        overflow: hidden;
+    }
 }
 
 #MY\:application-root {

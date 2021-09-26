@@ -8,24 +8,32 @@
           </router-link>
         </template>
       </div>
-      <div class="MY:main-navbar-brand-logo" :class="{'MY\:scroll-top': isHomepageTop}"></div>
+      <inline-svg title="MYlogo" class="MY:main-navbar-brand-logo"
+                  :class="{'MY\:scroll-top': isHomepageTop}"
+                  :src="require('../assets/illustrations/MYlogo.svg')">
+      </inline-svg>
     </div>
   </header>
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, PropType } from 'vue'
-import { EscrollState } from '@/types/EscrollState'
-import { RouteRecordRaw, useRoute, useRouter } from 'vue-router'
+import {computed, ComputedRef, defineComponent, PropType} from 'vue'
+import {EscrollState} from '@/types/EscrollState'
+import {RouteRecordRaw, useRoute, useRouter} from 'vue-router'
+import InlineSvg from 'vue-inline-svg';
+
 
 export default defineComponent({
+  components: {
+    InlineSvg
+  },
   props: {
     homepageScrollTop: {
       type: Number as PropType<EscrollState>,
       required: true
     }
   },
-  setup (props) {
+  setup(props) {
     const router = useRouter()
     const route = useRoute()
 
@@ -47,6 +55,7 @@ export default defineComponent({
 
 <style lang="scss">
 @import "../assets/styles/variables";
+@import "../assets/styles/mixins";
 
 $MY-main-navbar-vertical-padding: 1rem;
 
@@ -85,11 +94,7 @@ $MY-main-navbar-vertical-padding: 1rem;
     .MY\:main-navbar-brand-logo {
       width: $MY-main-navbar-logo-width;
       height: $MY-main-navbar-logo-height;
-
-      background-position: center;
-      background-size: contain;
-      background-image: url("../assets/illustrations/MYlogo.svg");
-      background-repeat: no-repeat;
+      fill: $MY-color-primary;
 
       transition: transform $MY-animations-duration-medium $MY-animations-style,
       transform-origin $MY-animations-duration-medium $MY-animations-style;
@@ -98,6 +103,7 @@ $MY-main-navbar-vertical-padding: 1rem;
 
       &.MY\:scroll-top {
         @media (min-width: $MY-xl) {
+          @include MY\:hardware-accelerate(transform, transform-origin);
           pointer-events: none;
           transform: scale(10);
           transform-origin: 100% -22%;

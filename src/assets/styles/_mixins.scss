@@ -1,1 +1,5 @@
 @import "variables";
+
+@mixin MY\:hardware-accelerate ($properties...) {
+    will-change: $properties;
+}
