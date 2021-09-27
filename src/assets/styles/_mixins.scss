@@ -1,5 +1,8 @@
 @import "variables";
 
 @mixin MY\:hardware-accelerate ($properties...) {
+    perspective: 1000px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     will-change: $properties;
 }
