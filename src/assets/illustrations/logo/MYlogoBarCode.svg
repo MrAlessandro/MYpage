@@ -1,52 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.35 59.19">
     <title>BarCode</title>
-    <g id="Livello_2" data-name="Livello 2">
-        <g id="Livello_1-2" data-name="Livello 1">
-            <rect width="9.03" height="59.19"/>
-            <rect x="18.06" width="9.03" height="59.19"/>
-            <rect x="48.15" width="9.03" height="59.19"/>
-            <rect x="66.21" width="9.03" height="59.19"/>
-            <rect x="102.32" width="9.03" height="59.19"/>
-            <rect x="132.42" width="9.03" height="59.19"/>
-            <rect x="192.6" width="9.03" height="59.19"/>
-            <rect x="210.66" width="9.03" height="59.19"/>
-            <rect x="252.79" width="9.03" height="59.19"/>
-            <rect x="276.87" width="9.03" height="59.19"/>
-            <rect x="288.91" width="9.03" height="59.19"/>
-            <rect x="306.96" width="9.03" height="59.19"/>
-            <rect x="349.09" width="9.03" height="59.19"/>
-            <rect x="373.17" width="9.03" height="59.19"/>
-            <rect x="385.21" width="9.03" height="59.19"/>
-            <rect x="403.26" width="9.03" height="59.19"/>
-            <rect x="30.09" width="3.01" height="59.19"/>
-            <rect x="36.11" width="3.01" height="59.19"/>
-            <rect x="42.13" width="3.01" height="59.19"/>
-            <rect x="60.19" width="3.01" height="59.19"/>
-            <rect x="84.26" width="3.01" height="59.19"/>
-            <rect x="90.28" width="3.01" height="59.19"/>
-            <rect x="96.3" width="3.01" height="59.19"/>
-            <rect x="114.36" width="3.01" height="59.19"/>
-            <rect x="126.4" width="3.01" height="59.19"/>
-            <rect x="144.45" width="3.01" height="59.19"/>
-            <rect x="150.47" width="3.01" height="59.19"/>
-            <rect x="162.51" width="3.01" height="59.19"/>
-            <rect x="174.55" width="3.01" height="59.19"/>
-            <rect x="186.58" width="3.01" height="59.19"/>
-            <rect x="204.64" width="3.01" height="59.19"/>
-            <rect x="222.7" width="3.01" height="59.19"/>
-            <rect x="234.74" width="3.01" height="59.19"/>
-            <rect x="240.75" width="3.01" height="59.19"/>
-            <rect x="246.77" width="3.01" height="59.19"/>
-            <rect x="270.85" width="3.01" height="59.19"/>
-            <rect x="300.94" width="3.01" height="59.19"/>
-            <rect x="319" width="3.01" height="59.19"/>
-            <rect x="331.04" width="3.01" height="59.19"/>
-            <rect x="337.06" width="3.01" height="59.19"/>
-            <rect x="343.08" width="3.01" height="59.19"/>
-            <rect x="361.13" width="3.01" height="59.19"/>
-            <rect x="397.25" width="3.01" height="59.19"/>
-            <rect x="421.32" width="3.01" height="59.19"/>
-            <rect x="427.34" width="3.01" height="59.19"/>
-        </g>
+    <g class="MY:brand-logo:bar-code:rectangles:group">
+        <rect class="MY:brand-logo:bar-code:rectangle" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="18.06" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="48.15" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="66.21" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="102.32" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="132.42" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="192.6" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="210.66" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="252.79" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="276.87" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="288.91" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="306.96" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="349.09" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="373.17" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="385.21" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="403.26" width="9.03" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="30.09" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="36.11" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="42.13" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="60.19" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="84.26" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="90.28" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="96.3" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="114.36" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="126.4" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="144.45" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="150.47" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="162.51" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="174.55" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="186.58" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="204.64" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="222.7" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="234.74" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="240.75" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="246.77" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="270.85" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="300.94" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="319" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="331.04" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="337.06" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="343.08" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="361.13" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="397.25" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="421.32" width="3.01" height="59.19"/>
+        <rect class="MY:brand-logo:bar-code:rectangle" x="427.34" width="3.01" height="59.19"/>
     </g>
 </svg>
