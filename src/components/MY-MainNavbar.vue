@@ -8,28 +8,25 @@
           </router-link>
         </template>
       </div>
-      <inline-svg title="MYlogo" class="MY:main-navbar-brand-logo"
-                  :class="{'MY\:scroll-top': isHomepageTop}"
-                  :src="require('../assets/illustrations/MYlogo.svg')">
-      </inline-svg>
+      <my-logo :is-homepage-top="isHomepageTop"/>
     </div>
   </header>
 </template>
 
 <script lang="ts">
 import {computed, ComputedRef, defineComponent, PropType} from 'vue'
-import {EscrollState} from '@/types/EscrollState'
+import {MYscrollState} from '@/types/Enums'
 import {RouteRecordRaw, useRoute, useRouter} from 'vue-router'
-import InlineSvg from 'vue-inline-svg';
+import MYlogo from '@/components/MY-Logo.vue'
 
 
 export default defineComponent({
   components: {
-    InlineSvg
+    'my-logo': MYlogo
   },
   props: {
     homepageScrollTop: {
-      type: Number as PropType<EscrollState>,
+      type: Number as PropType<MYscrollState>,
       required: true
     }
   },
@@ -38,7 +35,7 @@ export default defineComponent({
     const route = useRoute()
 
     const isHomepageTop: ComputedRef<boolean> = computed(() => {
-      return props.homepageScrollTop === EscrollState.TOP && route.path === '/'
+      return props.homepageScrollTop === MYscrollState.TOP && route.path === '/'
     })
 
     const routes: ComputedRef<Array<RouteRecordRaw>> = computed(() => {
@@ -90,28 +87,6 @@ $MY-main-navbar-vertical-padding: 1rem;
         }
       }
     }
-
-    .MY\:main-navbar-brand-logo {
-      width: $MY-main-navbar-logo-width;
-      height: $MY-main-navbar-logo-height;
-      fill: $MY-color-primary;
-
-      transition: transform $MY-animations-duration-medium $MY-animations-style,
-      transform-origin $MY-animations-duration-medium $MY-animations-style;
-
-      transform-origin: 100% -22%;
-
-      &.MY\:scroll-top {
-        @media (min-width: $MY-xl) {
-          @include MY\:hardware-accelerate(transform, transform-origin);
-          pointer-events: none;
-          transform: scale(10);
-          transform-origin: 100% -22%;
-        }
-      }
-
-    }
-
   }
 }
 </style>

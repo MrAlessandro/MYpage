@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import {defineComponent, onMounted, ref} from "vue";
+import {MYonSplashScreenAnimationEndEventName} from "@/types/Events";
 
 export default defineComponent({
   name: "MYSplashWelcome",
@@ -15,7 +16,7 @@ export default defineComponent({
     onMounted(() => {
       splashWelcomeBubble.value.classList.add('animate')
       splashWelcomeBubble.value.addEventListener('animationend', () => {
-        context.emit('splashed')
+        context.emit(MYonSplashScreenAnimationEndEventName)
       });
     })
 
