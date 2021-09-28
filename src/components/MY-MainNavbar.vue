@@ -8,7 +8,7 @@
           </router-link>
         </template>
       </div>
-      <my-logo :is-homepage-top="isHomepageTop"/>
+<!--      <my-logo :is-homepage-top="isHomepageTop"/>-->
     </div>
   </header>
 </template>
@@ -17,12 +17,12 @@
 import {computed, ComputedRef, defineComponent, PropType} from 'vue'
 import {MYscrollState} from '@/types/Enums'
 import {RouteRecordRaw, useRoute, useRouter} from 'vue-router'
-import MYlogo from '@/components/MY-Logo.vue'
+//import MYlogo from '@/components/MY-Logo.vue'
 
 
 export default defineComponent({
   components: {
-    'my-logo': MYlogo
+    //'my-logo': MYlogo
   },
   props: {
     homepageScrollTop: {
@@ -43,7 +43,7 @@ export default defineComponent({
     })
 
     return {
-      isHomepageTop,
+      isHomepageTop: isHomepageTop,
       routes
     }
   }

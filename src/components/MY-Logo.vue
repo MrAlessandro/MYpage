@@ -1,5 +1,5 @@
 <template>
-  <div class="MY:brand-logo" :class="{'MY\:scroll-top': isHomepageTop}">
+  <div class="MY:brand-logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.47 121.38" class="MY:brand-logo:left-bracket">
       <title>LeftBracket</title>
       <g class="MY:brand-logo:left-bracket:paths:group">
@@ -8,8 +8,10 @@
       </g>
     </svg>
     <div class="MY:brand-logo:content">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.35 59.19" class="MY:brand-logo:bar-code">
+      <svg ref="barCode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.35 59.19" class="MY:brand-logo:bar-code" preserveAspectRatio="none">
         <title>BarCode</title>
+        <animate ref="barcodeCollapseAnimation" begin="indefinite" attributeName="viewBox" from="0 0 430.35 59.19" to="0 0 430.35 0" :dur="animationDuration" repeatCount="indefinite"></animate>
+        <animate ref="barcodeExpandAnimation" begin="indefinite" attributeName="viewBox" from="0 0 430.35 0" to="0 0 430.35 59.19" :dur="animationDuration" repeatCount="indefinite"></animate>
         <g class="MY:brand-logo:bar-code:rectangles:group">
           <rect class="MY:brand-logo:bar-code:rectangle" width="9.03" height="59.19"/>
           <rect class="MY:brand-logo:bar-code:rectangle" x="18.06" width="9.03" height="59.19"/>
@@ -96,17 +98,32 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, onMounted, reactive, ref, toRefs} from "vue";
+import variables from '@/assets/styles/_variables.scss'
 
 export default defineComponent({
   props: {
-    isHomepageTop: {
+    collapse: {
       type: Boolean,
       required: true
     },
   },
   setup() {
-    return {}
+    const state = reactive({
+      barCode: ref(),
+      barcodeCollapseAnimation: ref(),
+      barcodeExpandAnimation: ref(),
+      animationDuration: variables.MYanimationsDurationMedium
+    })
+
+    onMounted(()=>{
+      console.log(variables)
+      state.barcodeExpandAnimation.beginElement()
+    })
+
+    return {
+      ...toRefs(state)
+    }
   }
 })
 </script>
@@ -120,8 +137,8 @@ export default defineComponent({
   display: flex;
   align-items: center;
   transform-origin: 100% -170%;
-  transition: transform $MY-animations-duration-medium $MY-animations-style,
-  transform-origin $MY-animations-duration-medium $MY-animations-style;
+
+  //@include MY\:animate(MY\:band-logo\:animation\:scale-down, $MY-animations-duration-medium);
 
   .MY\:brand-logo\:left-bracket,
   .MY\:brand-logo\:right-bracket, {
@@ -131,18 +148,13 @@ export default defineComponent({
 
   .MY\:brand-logo\:content {
     width: 86%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 
     .MY\:brand-logo\:bar-code {
       fill: $MY-color-primary;
-      height: 0;
-      transition: height $MY-animations-duration-medium $MY-animations-style;
+      //@include MY\:animate(MY\:band-logo\:animation\:barcode\:scale-down, $MY-animations-duration-medium);
 
       .MY\:brand-logo\:bar-code\:rectangle {
-        height: 0;
-        transition: height $MY-animations-duration-medium $MY-animations-style,
+        //@include MY\:animate(MY\:band-logo\:animation\:barcode\:rectangle\:scale-down, $MY-animations-duration-medium);
       }
     }
 
@@ -151,9 +163,9 @@ export default defineComponent({
       justify-content: space-between;
       padding-left: 3.72%;
       padding-right: 3.72%;
-      padding-top: 0;
+      padding-top: 1.8%;
 
-      transition: padding-top $MY-animations-duration-medium $MY-animations-style;
+      ////@include MY\:animate(MY\:band-logo\:animation\:text\:padding-top\:scale-down, $MY-animations-duration-medium);
 
       .MY\:brand-logo\:text-web {
         fill: $MY-color-primary;
@@ -167,26 +179,117 @@ export default defineComponent({
     }
   }
 
-  &.MY\:scroll-top {
+  &.MY\:collapse {
+    .MY\:brand-logo\:content {
+      .MY\:brand-logo\:bar-code {
+      }
+    }
+
     @media (min-width: $MY-xl) {
-      @include MY\:hardware-accelerate(transform, transform-origin);
-      pointer-events: none;
-      transform: scale(3);
-      transform-origin: 100% -170%;
+      //@include MY\:hardware-accelerate(transform, transform-origin);
+      //@include MY\:animate(MY\:band-logo\:animation\:scale-up, $MY-animations-duration-medium);
+      //pointer-events: none;
 
       .MY\:brand-logo\:content {
         .MY\:brand-logo\:bar-code {
-          height: 66.6%;
+          transform: scaleY(0);
+          //@include MY\:hardware-accelerate(transform, transform-origin);
+          //@include MY\:animate(MY\:band-logo\:animation\:barcode\:scale-up, $MY-animations-duration-medium);
 
           .MY\:brand-logo\:bar-code\:rectangle {
-            height: 100%;
+            //@include MY\:hardware-accelerate(transform, transform-origin);
+            //@include MY\:animate(MY\:band-logo\:animation\:barcode\:rectangle\:scale-up, $MY-animations-duration-medium, backwards);
           }
         }
+
         .MY\:brand-logo\:content\:text {
-          padding-top: 1.8%;
+          //@include MY\:hardware-accelerate(transform, transform-origin);
+          //@include MY\:animate(MY\:band-logo\:animation\:text\:padding-top\:scale-up, $MY-animations-duration-medium);
         }
       }
     }
   }
 }
+
+/*
+@keyframes MY\:band-logo\:animation\:scale-up {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(3);
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:scale-down {
+  0% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:barcode\:scale-up {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 66.6%;
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:barcode\:scale-down {
+  0% {
+    height: 66.6%;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:barcode\:rectangle\:scale-up {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:barcode\:rectangle\:scale-down {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:text\:padding-top\:scale-up {
+  0% {
+    padding-top: 0;
+  }
+
+  100% {
+    padding-top: 1.8%;
+  }
+}
+
+@keyframes MY\:band-logo\:animation\:text\:padding-top\:scale-down {
+  0% {
+    padding-top: 1.8%;
+  }
+
+  100% {
+    padding-top: 0;
+  }
+}
+*/
 </style>

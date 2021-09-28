@@ -54,9 +54,9 @@ export default defineComponent({
     &.animate {
       @include MY\:hardware-accelerate(transform);
       animation-name: MY\:bubble-animation;
-      animation-duration: 1s;
+      animation-duration: $MY-animations-duration-extra-long;
       animation-fill-mode: forwards;
-      animation-timing-function: ease-in;
+      animation-timing-function: $MY-animations-style;
     }
   }
 

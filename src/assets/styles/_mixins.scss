@@ -6,3 +6,10 @@
     transform: translateZ(0);
     will-change: $properties;
 }
+
+@mixin MY\:animate ($animation-name, $animation-duration, $animation-fill-mode: forwards, $animation-timing-function: $MY-animations-style) {
+    animation-name: $animation-name;
+    animation-duration: $animation-duration;
+    animation-fill-mode: $animation-fill-mode;
+    animation-timing-function: $animation-timing-function;
+}

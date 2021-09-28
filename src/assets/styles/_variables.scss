@@ -29,6 +29,7 @@ $MY-color-primary-accent: #B39542;
 $MY-animations-duration-short: 200ms;
 $MY-animations-duration-medium: 300ms;
 $MY-animations-duration-long: 400ms;
+$MY-animations-duration-extra-long: 1000ms;
 $MY-animations-style: ease-in-out;
 /**************/
 
@@ -46,3 +47,14 @@ $MY-font-size-xxs: 0.618rem;
 $MY-main-navbar-logo-width: 60px;
 $MY-main-navbar-logo-height: 36px;
 /*******************/
+
+
+/* EXPORT NEEDED VARIABLES */
+:export {
+    MYanimationsDurationShort: $MY-animations-duration-short;
+    MYanimationsDurationMedium: $MY-animations-duration-medium;
+    MYanimationsDurationLong: $MY-animations-duration-long;
+    MYanimationsDurationExtraLong: $MY-animations-duration-extra-long;
+    MYanimationsStyle: $MY-animations-style;
+}
+/***************************/
