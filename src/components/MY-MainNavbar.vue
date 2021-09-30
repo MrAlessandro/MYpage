@@ -3,12 +3,11 @@
     <div class="MY:container">
       <div class="MY:main-navbar-link-box">
         <template v-for="item in routes" :key="item.path">
-          <router-link class="MY:main-navbar-link MY:text-sm" :to="item.path">
+          <router-link class="MY:main-navbar-link MY:text-xs" :to="item.path">
             {{ item.name }}
           </router-link>
         </template>
       </div>
-<!--      <my-logo :is-homepage-top="isHomepageTop"/>-->
     </div>
   </header>
 </template>
@@ -17,7 +16,6 @@
 import {computed, ComputedRef, defineComponent, PropType} from 'vue'
 import {MYscrollState} from '@/types/Enums'
 import {RouteRecordRaw, useRoute, useRouter} from 'vue-router'
-//import MYlogo from '@/components/MY-Logo.vue'
 
 
 export default defineComponent({
