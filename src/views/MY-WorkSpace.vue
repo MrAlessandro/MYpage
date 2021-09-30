@@ -15,7 +15,7 @@ export default defineComponent({
   },
   setup() {
     const state = reactive({
-      collapse: true
+      collapse: false
     })
 
     return {

@@ -1,105 +1,156 @@
 <template>
-  <div class="MY:brand-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.47 121.38" class="MY:brand-logo:left-bracket">
-      <title>LeftBracket</title>
-      <g class="MY:brand-logo:left-bracket:paths:group">
-        <path class="MY:brand-logo:left-bracket:path"
-              d="M25.63,121.36a22.87,22.87,0,0,1-5.8-.83l-.19,0A10.88,10.88,0,0,1,15,117.64c-.11-.12-.22-.23-.32-.35A13.16,13.16,0,0,1,12,112.13a20.24,20.24,0,0,1-.5-2.18,31.31,31.31,0,0,1-.37-3.18c-.08-1.15-.12-2.3-.12-3.46q0-7.91.56-14.75t.57-14.18a18.67,18.67,0,0,0-.5-4.24l0-.13a8.36,8.36,0,0,0-1.8-3.53,8.26,8.26,0,0,0-2-1.65,11.78,11.78,0,0,0-1.77-.9,10.93,10.93,0,0,0-1.22-.41,14.18,14.18,0,0,0-2.33-.44A21.16,21.16,0,0,0,0,63V58.43a20.07,20.07,0,0,0,3.91-.35,11.65,11.65,0,0,0,2.16-.64,12.34,12.34,0,0,0,2-1A7.88,7.88,0,0,0,9.81,54.9a8.47,8.47,0,0,0,1.83-3.53,16.72,16.72,0,0,0,.5-4.09q0-7.62-.57-14.47c-.15-1.83-.27-3.67-.35-5.5Q11,22.69,11,18.07a42.06,42.06,0,0,1,.38-6A21.54,21.54,0,0,1,12,9.24a3.57,3.57,0,0,1,.12-.4,14.84,14.84,0,0,1,1-2.53A11,11,0,0,1,15,3.74a11.11,11.11,0,0,1,1.08-1A11.29,11.29,0,0,1,19.83.85a20.45,20.45,0,0,1,3.7-.7c1-.1,2.09-.15,3.14-.15h4.8V4.09H27.1A14.32,14.32,0,0,0,21.6,5a6.57,6.57,0,0,0-3.18,2.61,8.92,8.92,0,0,0-.47.86,18.52,18.52,0,0,0-1.55,6.27c-.12,1.29-.17,2.58-.17,3.88q0,1.71,0,3.42.07,4.89.39,9.78.44,6.27.43,13.9V46a24.9,24.9,0,0,1-1.55,9.62,8.13,8.13,0,0,1-2.84,3.46,10.09,10.09,0,0,1-2.81,1.34V61a8.53,8.53,0,0,1,5.65,4.94,25.5,25.5,0,0,1,1.55,9.74q0,7.62-.43,13.9t-.42,13.2q0,7.47,2.19,11,1.63,2.64,5.7,3.3a17.51,17.51,0,0,0,3,.22h4.37v4.1h-4.8Z"/>
-      </g>
-    </svg>
-    <div class="MY:brand-logo:content">
-      <svg ref="barCode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.35 59.19" class="MY:brand-logo:bar-code" preserveAspectRatio="none">
-        <title>BarCode</title>
-        <animate ref="barcodeCollapseAnimation" begin="indefinite" attributeName="viewBox" from="0 0 430.35 59.19" to="0 0 430.35 0" :dur="animationDuration" repeatCount="indefinite"></animate>
-        <animate ref="barcodeExpandAnimation" begin="indefinite" attributeName="viewBox" from="0 0 430.35 0" to="0 0 430.35 59.19" :dur="animationDuration" repeatCount="indefinite"></animate>
-        <g class="MY:brand-logo:bar-code:rectangles:group">
-          <rect class="MY:brand-logo:bar-code:rectangle" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="18.06" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="48.15" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="66.21" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="102.32" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="132.42" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="192.6" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="210.66" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="252.79" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="276.87" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="288.91" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="306.96" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="349.09" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="373.17" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="385.21" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="403.26" width="9.03" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="30.09" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="36.11" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="42.13" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="60.19" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="84.26" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="90.28" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="96.3" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="114.36" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="126.4" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="144.45" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="150.47" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="162.51" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="174.55" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="186.58" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="204.64" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="222.7" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="234.74" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="240.75" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="246.77" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="270.85" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="300.94" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="319" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="331.04" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="337.06" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="343.08" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="361.13" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="397.25" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="421.32" width="3.01" height="59.19"/>
-          <rect class="MY:brand-logo:bar-code:rectangle" x="427.34" width="3.01" height="59.19"/>
+  <div ref="logo" class="MY:brand-logo" :class="{'MY\:brand-logo\:collapse': collapse}">
+    <div class="MY:brand-logo:left-bracket:shell">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 123" class="MY:brand-logo:left-bracket">
+        <title>LeftBracket</title>
+        <g class="MY:brand-logo:left-bracket:paths:group">
+          <path
+              d="M26.06,123a23.15,23.15,0,0,1-5.9-.84l-.19,0a11.08,11.08,0,0,1-4.76-2.88c-.11-.12-.22-.23-.33-.36a13.41,13.41,0,0,1-2.68-5.22,18.58,18.58,0,0,1-.5-2.21,31.92,31.92,0,0,1-.39-3.22q-.12-1.76-.12-3.51,0-8,.58-14.94t.57-14.38a19,19,0,0,0-.5-4.29,1,1,0,0,0,0-.14A8.23,8.23,0,0,0,8,65.7a11.68,11.68,0,0,0-1.8-.91,9.53,9.53,0,0,0-1.24-.42,15.7,15.7,0,0,0-2.36-.45A24.57,24.57,0,0,0,0,63.79V59.21a20.64,20.64,0,0,0,4-.35,11.85,11.85,0,0,0,2.2-.65,12.29,12.29,0,0,0,2.05-1.06A8.42,8.42,0,0,0,10,55.64a8.62,8.62,0,0,0,1.87-3.58,17.21,17.21,0,0,0,.5-4.15q0-7.72-.57-14.66-.24-2.79-.36-5.58-.23-4.68-.22-9.36a41.67,41.67,0,0,1,.39-6,23.74,23.74,0,0,1,.62-2.9L12.32,9a15.71,15.71,0,0,1,1-2.56,11.13,11.13,0,0,1,1.85-2.61,11.57,11.57,0,0,1,1.1-1A11.19,11.19,0,0,1,20.16.86,21.29,21.29,0,0,1,23.92.15C25,.05,26.05,0,27.12,0H32V4.15H27.55A14.57,14.57,0,0,0,22,5.08a6.65,6.65,0,0,0-3.23,2.64,7.37,7.37,0,0,0-.48.87,18.59,18.59,0,0,0-1.57,6.35c-.12,1.31-.18,2.63-.18,3.94,0,1.15,0,2.31,0,3.46q.07,5,.4,9.91.43,6.36.43,14.09v.27c0,4.16-.54,7.41-1.58,9.74a8.22,8.22,0,0,1-2.88,3.51A10.41,10.41,0,0,1,10,61.21v.58a8.61,8.61,0,0,1,5.74,5,25.52,25.52,0,0,1,1.58,9.87q0,7.73-.43,14.09t-.43,13.37q0,7.57,2.23,11.16,1.66,2.67,5.8,3.35a19.1,19.1,0,0,0,3,.22H32V123H27.12Z"/>
         </g>
       </svg>
-      <div class="MY:brand-logo:content:text">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.73 23.34" class="MY:brand-logo:text-web">
-          <title>TextWeb</title>
-          <g class="MY:brand-logo:text-web:letters:group">
-            <polygon class="MY:brand-logo:text-web:letter:W"
-                     points="3.71 23.31 0 0.04 2.41 0.04 4.92 15.79 8.73 1.75 9.53 1.75 13.24 15.89 15.35 0.04 17.55 0.04 13.94 23.31 12.94 23.31 8.93 8.16 4.82 23.31 3.71 23.31"/>
-            <polygon class="MY:brand-logo:text-web:letter:E"
-                     points="49.76 23.31 49.76 0.04 64 0.04 64 2.35 52.16 2.35 52.16 9.97 61.99 9.97 61.99 12.38 52.16 12.38 52.16 21 63.9 21 63.9 23.31 49.76 23.31"/>
-            <path class="MY:brand-logo:text-web:letter:B"
-                  d="M108.34,10.87c3.86-1.2,4.78-7,1.5-9.33C107.1-.73,100.9.24,97.51,0V23.31c3.47-.1,10.66.62,13-1.7C114.37,18.68,112.89,12.17,108.34,10.87ZM100,2.25c3.11,0,9.11-.77,9.23,3.71.46,4-5.91,3.84-9.23,3.71Zm9.88,15.2C109.42,22,103.22,20.88,100,21V11.88C104.13,11.6,111,11.75,109.89,17.45Z"/>
-          </g>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.9 23.88" class="MY:brand-logo:text-done">
-          <title>TextDone</title>
-          <g class="MY:brand-logo:text-done:letters:group">
-            <path class="MY:brand-logo:text-done:letter:N"
-                  d="M96.2,23.42V.14h2.51l9.73,17.26V.14h2.91v.3c-1.1.07,0,22.18-.4,23h-2L98.61,5.16V23.42Z"/>
-            <polygon class="MY:brand-logo:text-done:letter:E"
-                     points="144.65 23.42 144.65 0.14 158.9 0.14 158.9 2.45 147.06 2.45 147.06 10.07 156.89 10.07 156.89 12.48 147.06 12.48 147.06 21.11 158.8 21.11 158.8 23.42 144.65 23.42"/>
-            <path class="MY:brand-logo:text-done:letter:D"
-                  d="M15,9.65C14.53.55,7.41-.47,0,.14V23.42C10.38,24.67,16.09,20.39,15,9.65ZM2.51,21.41V2.35c6.62-1.07,10.53,3.23,10,9.73C13,18.94,8.42,22.24,2.51,21.41Z"/>
-            <path class="MY:brand-logo:text-done:letter:O"
-                  d="M58.37.56C45.7-3.8,43.21,19.46,52.78,23.4,65.09,27.4,67.72,5,58.37.56Zm-2.9,21c-7.93-.38-7.77-18.58,0-19.16C63.2,2.67,63.29,21.3,55.47,21.51Z"/>
+    </div>
+    <div class="MY:brand-logo:content">
+      <div class="MY:brand-logo:bar-code:shell">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 60" class="MY:brand-logo:bar-code"
+             preserveAspectRatio="none">
+          <title>BarCode</title>
+          <g class="MY:brand-logo:bar-code:rectangles:group">
+            <rect class="MY:brand-logo:bar-code:rectangle" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="18.29" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="48.78" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="67.08" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="103.66" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="134.15" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="195.13" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="213.43" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="256.11" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="280.5" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="292.7" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="310.99" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="353.68" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="378.07" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="390.27" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="408.56" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="30.49" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="36.59" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="42.69" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="60.98" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="85.37" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="91.47" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="97.57" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="115.86" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="128.06" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="146.35" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="152.45" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="164.64" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="176.84" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="189.03" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="207.33" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="225.62" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="237.82" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="243.92" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="250.01" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="274.41" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="304.9" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="323.19" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="335.38" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="341.48" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="347.58" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="365.87" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="402.46" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="426.85" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="432.95" width="3.05" height="60"/>
           </g>
         </svg>
       </div>
+      <div class="MY:brand-logo:text:shell">
+        <div class="MY:brand-logo:text:web:shell">
+          <div class="MY:brand-logo:text:web:W:shell">
+            <svg class="MY:brand-logo:text:web:W" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 21.18 23.2">
+              <title>TextWeb-W</title>
+              <g class="MY:brand-logo:text:web:W:polygons:group">
+                <path d="M10.47,4.64,6.9,23H3.43L0,0H2.48l2.9,19.43L9.16,0h2.66L15.6,19.43,18.51,0H21L17.55,23H14.08Z"/>
+              </g>
+            </svg>
+          </div>
+          <div class="MY:brand-logo:text:web:E:shell">
+            <svg class="MY:brand-logo:text:web:E" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 10.64 23.2">
+              <title>TextWeb-E</title>
+              <g class="MY:brand-logo:text:web:E:polygons:group">
+                <path d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
+              </g>
+            </svg>
+          </div>
+          <div class="MY:brand-logo:text:web:B:shell">
+            <svg class="MY:brand-logo:text:web:B" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.52 23.2">
+              <title>TextWeb-B</title>
+              <g class="MY:brand-logo:text:web:B:paths:group">
+                <path
+                    d="M0,23V0H5.34a9.51,9.51,0,0,1,1.6.13A6.1,6.1,0,0,1,8.47.6a4.2,4.2,0,0,1,2.38,3.11A6.51,6.51,0,0,1,11,5V7.08a3.63,3.63,0,0,1-2.51,3.85,4.56,4.56,0,0,1,1.45.67,3.37,3.37,0,0,1,1.31,2.16,5.06,5.06,0,0,1,.1,1.1v3.19a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23c-.36,0-.73.05-1.09.05Zm8.85-4.95V14.86a3,3,0,0,0-.6-1.76c-.08-.1-.16-.21-.25-.31a3,3,0,0,0-2.3-.94H2.48v9H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Zm-.36-11V5a2.67,2.67,0,0,0-.82-2V3a2.75,2.75,0,0,0-1.33-.74,4.67,4.67,0,0,0-1-.11H2.48v8H5.34a3.6,3.6,0,0,0,1-.11,2.71,2.71,0,0,0,1.34-.81,3.08,3.08,0,0,0,.63-1A2.87,2.87,0,0,0,8.49,7.08Z"/>
+              </g>
+            </svg>
+
+
+          </div>
+        </div>
+        <div class="MY:brand-logo:text:done:shell">
+          <div class="MY:brand-logo:text:done:D:shell">
+            <svg class="MY:brand-logo:text:done:D" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.52 23.2">
+              <title>TextDone-D</title>
+              <g class="MY:brand-logo:text:done:D:paths:group">
+                <path
+                    d="M5.7,23H0V0H5.7A9.39,9.39,0,0,1,7.29.13,6.18,6.18,0,0,1,8.83.6a4.19,4.19,0,0,1,1.06.71,4.28,4.28,0,0,1,1.32,2.4A5.78,5.78,0,0,1,11.32,5v13.1a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23C6.43,23,6.06,23,5.7,23Zm3.15-4.95V5A2.75,2.75,0,0,0,8,3L8,3a2.7,2.7,0,0,0-1.33-.74,4.67,4.67,0,0,0-.95-.11H2.48V20.88H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Z"/>
+              </g>
+            </svg>
+
+          </div>
+          <div class="MY:brand-logo:text:done:O:shell">
+            <svg class="MY:brand-logo:text:done:O" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.7 23.2">
+              <title>TextDone-O</title>
+              <g class="MY:brand-logo:text:done:O:paths:group">
+                <path
+                    d="M11.5,4.74V18.26a5.79,5.79,0,0,1-.17,1.44,4,4,0,0,1-1.27,2.07,5.54,5.54,0,0,1-3,1.16A10.86,10.86,0,0,1,5.77,23a6.55,6.55,0,0,1-4.32-1.23A4.1,4.1,0,0,1,.09,19.35,6.59,6.59,0,0,1,0,18.26V4.74A5.79,5.79,0,0,1,.17,3.3,4,4,0,0,1,1.44,1.23a5.54,5.54,0,0,1,3-1.16A11,11,0,0,1,5.73,0a6.55,6.55,0,0,1,4.32,1.23,4.1,4.1,0,0,1,1.36,2.42A6.59,6.59,0,0,1,11.5,4.74ZM9.13,18.26V4.74c0-1.63-.91-2.53-2.75-2.68q-.32,0-.63,0a6.32,6.32,0,0,0-1.23.11,2.4,2.4,0,0,0-2.15,2.6V18.26c0,1.63.92,2.53,2.75,2.68q.32,0,.63,0A6.32,6.32,0,0,0,7,20.86,2.4,2.4,0,0,0,9.13,18.26Z"/>
+              </g>
+            </svg>
+
+
+          </div>
+          <div class="MY:brand-logo:text:done:N:shell">
+            <svg class="MY:brand-logo:text:done:N" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 12.83 23.2">
+              <title>TextDone-N</title>
+              <g class="MY:brand-logo:text:done:N:polygons:group">
+                <path d="M2.48,5.31V23H0V0H2.48l7.68,17.69V0h2.47V23H10.16Z"/>
+              </g>
+            </svg>
+
+          </div>
+          <div class="MY:brand-logo:text:done:E:shell">
+            <svg class="MY:brand-logo:text:done:E" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 10.64 23.2">
+              <title>TextDone-E</title>
+              <g class="MY:brand-logo:text:done:E:polygons:group">
+                <path d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
+              </g>
+            </svg>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.47 121.38" class="MY:brand-logo:right-bracket">
-      <title>RightBracket</title>
-      <g class="MY:brand-logo:right-bracket:paths:group">
-        <path class="MY:brand-logo:right-bracket:path"
-              d="M4.8,121.38H0v-4.1H4.38a17.39,17.39,0,0,0,3-.22q4.07-.66,5.71-3.3,2.17-3.54,2.18-11,0-6.91-.42-13.2t-.42-13.9A25.31,25.31,0,0,1,16,65.91,8.52,8.52,0,0,1,21.59,61v-.56a10.23,10.23,0,0,1-2.81-1.34A8,8,0,0,1,16,55.61,24.9,24.9,0,0,1,14.4,46v-.26q0-7.62.42-13.9.33-4.89.4-9.78c0-1.14,0-2.28,0-3.42a38.61,38.61,0,0,0-.17-3.88,18.29,18.29,0,0,0-1.55-6.27,8.84,8.84,0,0,0-.46-.86A6.61,6.61,0,0,0,9.88,5a14.36,14.36,0,0,0-5.5-.92H0V0H4.8c1,0,2.1.05,3.14.15a20.28,20.28,0,0,1,3.7.7,11.2,11.2,0,0,1,3.79,1.91,9.18,9.18,0,0,1,1.08,1,11,11,0,0,1,1.82,2.57,15.72,15.72,0,0,1,1,2.53l.12.4a23.21,23.21,0,0,1,.6,2.87,40.62,40.62,0,0,1,.38,6q0,4.62-.21,9.24c-.08,1.83-.2,3.67-.35,5.5q-.57,6.86-.56,14.47a16.72,16.72,0,0,0,.49,4.09,8.47,8.47,0,0,0,1.83,3.53,8.17,8.17,0,0,0,1.73,1.49,11.71,11.71,0,0,0,4.17,1.69,20.14,20.14,0,0,0,3.91.35V63a21.27,21.27,0,0,0-2.52.13,14.06,14.06,0,0,0-2.32.44,10.43,10.43,0,0,0-1.23.41,12.27,12.27,0,0,0-1.77.9,8.46,8.46,0,0,0-2,1.65A8.36,8.36,0,0,0,19.86,70l0,.13a18.65,18.65,0,0,0-.49,4.24q0,7.34.56,14.18t.56,14.75c0,1.16,0,2.31-.11,3.46A31.19,31.19,0,0,1,20,110c-.13.74-.29,1.46-.49,2.18a13.43,13.43,0,0,1-2.64,5.16l-.33.35a10.82,10.82,0,0,1-4.68,2.84l-.19,0a22.87,22.87,0,0,1-5.8.83Z"/>
-      </g>
-    </svg>
+    <div class="MY:brand-logo:right-bracket:shell">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 123" class="MY:brand-logo:right-bracket">
+        <title>RightBracket</title>
+        <g class="MY:brand-logo:right-bracket:paths:group">
+          <path
+              d="M4.88,123H0v-4.15H4.45a19.1,19.1,0,0,0,3-.22q4.14-.67,5.8-3.35,2.23-3.59,2.23-11.16,0-7-.43-13.37t-.43-14.09a25.52,25.52,0,0,1,1.58-9.87,8.61,8.61,0,0,1,5.74-5v-.58a10.41,10.41,0,0,1-2.86-1.35,8.22,8.22,0,0,1-2.88-3.51c-1-2.33-1.56-5.58-1.58-9.74v-.27q0-7.73.43-14.09.33-5,.4-9.91c0-1.15,0-2.31,0-3.46,0-1.31-.06-2.63-.18-3.94a18.59,18.59,0,0,0-1.57-6.35,7.37,7.37,0,0,0-.48-.87A6.65,6.65,0,0,0,10,5.08a14.57,14.57,0,0,0-5.59-.93H0V0H4.88C6,0,7,.05,8.08.15a21.29,21.29,0,0,1,3.76.71A11.19,11.19,0,0,1,15.69,2.8a11.57,11.57,0,0,1,1.1,1A11.13,11.13,0,0,1,18.64,6.4a15.71,15.71,0,0,1,1,2.56l.12.41a23.74,23.74,0,0,1,.62,2.9,41.67,41.67,0,0,1,.39,6q0,4.68-.22,9.36-.12,2.79-.36,5.58-.57,6.95-.57,14.66a17.21,17.21,0,0,0,.5,4.15A8.62,8.62,0,0,0,22,55.64a8.42,8.42,0,0,0,1.75,1.51,12.29,12.29,0,0,0,2,1.06,11.85,11.85,0,0,0,2.2.65,20.64,20.64,0,0,0,4,.35v4.58a24.57,24.57,0,0,0-2.57.13,15.7,15.7,0,0,0-2.36.45,9.53,9.53,0,0,0-1.24.42,11.68,11.68,0,0,0-1.8.91,8.23,8.23,0,0,0-3.83,5.24,1,1,0,0,0,0,.14,19,19,0,0,0-.5,4.29q0,7.44.57,14.38t.58,14.94q0,1.75-.12,3.51a31.92,31.92,0,0,1-.39,3.22,18.58,18.58,0,0,1-.5,2.21,13.41,13.41,0,0,1-2.68,5.22c-.11.13-.22.24-.33.36A11.08,11.08,0,0,1,12,122.09l-.19,0a23.15,23.15,0,0,1-5.9.84Z"/>
+        </g>
+      </svg>
+
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive, ref, toRefs} from "vue";
-import variables from '@/assets/styles/_variables.scss'
+import {defineComponent, reactive, ref, toRefs} from "vue";
 
 export default defineComponent({
   props: {
@@ -110,19 +161,11 @@ export default defineComponent({
   },
   setup() {
     const state = reactive({
-      barCode: ref(),
-      barcodeCollapseAnimation: ref(),
-      barcodeExpandAnimation: ref(),
-      animationDuration: variables.MYanimationsDurationMedium
-    })
-
-    onMounted(()=>{
-      console.log(variables)
-      state.barcodeExpandAnimation.beginElement()
+      logo: ref(),
     })
 
     return {
-      ...toRefs(state)
+      ...toRefs(state),
     }
   }
 })
@@ -133,163 +176,175 @@ export default defineComponent({
 @import "../assets/styles/mixins";
 
 .MY\:brand-logo {
-  width: 200px;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  transform-origin: 100% -170%;
 
-  //@include MY\:animate(MY\:band-logo\:animation\:scale-down, $MY-animations-duration-medium);
-
-  .MY\:brand-logo\:left-bracket,
-  .MY\:brand-logo\:right-bracket, {
-    width: 6%;
+  .MY\:brand-logo\:left-bracket\:shell,
+  .MY\:brand-logo\:right-bracket\:shell, {
+    width: 6.400%;
     fill: $MY-color-primary;
   }
 
   .MY\:brand-logo\:content {
-    width: 86%;
+    width: 87.200%;
 
-    .MY\:brand-logo\:bar-code {
+    .MY\:brand-logo\:bar-code\:shell {
+      position: relative;
+      width: 100%;
+      padding-top: 13.761%;
       fill: $MY-color-primary;
-      //@include MY\:animate(MY\:band-logo\:animation\:barcode\:scale-down, $MY-animations-duration-medium);
+      transition: padding-top $MY-animations-duration-extra-long $MY-animations-style;
 
-      .MY\:brand-logo\:bar-code\:rectangle {
-        //@include MY\:animate(MY\:band-logo\:animation\:barcode\:rectangle\:scale-down, $MY-animations-duration-medium);
+      .MY\:brand-logo\:bar-code {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 
-    .MY\:brand-logo\:content\:text {
+    .MY\:brand-logo\:text\:shell {
       display: flex;
       justify-content: space-between;
-      padding-left: 3.72%;
-      padding-right: 3.72%;
-      padding-top: 1.8%;
+      width: 100%;
+      padding-top: 1.858%;
+      padding-left: 3.717%;
+      padding-right: 3.717%;
+      transition: padding-top $MY-animations-duration-extra-long $MY-animations-style;
 
-      ////@include MY\:animate(MY\:band-logo\:animation\:text\:padding-top\:scale-down, $MY-animations-duration-medium);
-
-      .MY\:brand-logo\:text-web {
+      .MY\:brand-logo\:text\:letter {
         fill: $MY-color-primary;
-        width: 26.04%;
+        stroke: $MY-color-primary;
+        stroke-width: 0;
+        fill-opacity: 1;
+        transition: width $MY-animations-duration-extra-long $MY-animations-style,
+        fill-opacity $MY-animations-duration-extra-long $MY-animations-style,
+        stroke-width $MY-animations-duration-extra-long $MY-animations-style;
       }
 
-      .MY\:brand-logo\:text-done {
-        fill: $MY-color-primary;
-        width: 36.74%;
+      .MY\:brand-logo\:text\:web\:shell {
+        width: 24.852%;
+        display: flex;
+        justify-content: space-between;
+        transition: width $MY-animations-duration-extra-long $MY-animations-style;
+
+        .MY\:brand-logo\:text\:web\:W\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 19.365%;
+        }
+
+        .MY\:brand-logo\:text\:web\:E\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 9.633%;
+        }
+
+        .MY\:brand-logo\:text\:web\:B\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 10.449%;
+        }
+      }
+
+      .MY\:brand-logo\:text\:done\:shell {
+        width: 35.571%;
+        display: flex;
+        justify-content: space-between;
+        transition: width $MY-animations-duration-extra-long $MY-animations-style;
+
+        .MY\:brand-logo\:text\:done\:D\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 7.300%;
+        }
+
+        .MY\:brand-logo\:text\:done\:O\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 7.415%;
+        }
+
+        .MY\:brand-logo\:text\:done\:N\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 8.144%;
+        }
+
+        .MY\:brand-logo\:text\:done\:E\:shell {
+          @extend .MY\:brand-logo\:text\:letter;
+          width: 6.730%;
+        }
       }
     }
   }
 
-  &.MY\:collapse {
+  /* COLLAPSED STYLE */
+  // TODO: Rivedere Hardware acceleration
+  &.MY\:brand-logo\:collapse {
     .MY\:brand-logo\:content {
-      .MY\:brand-logo\:bar-code {
+      .MY\:brand-logo\:bar-code\:shell {
+        @include MY\:hardware-accelerate(padding-top);
+        padding-top: 0;
       }
-    }
 
-    @media (min-width: $MY-xl) {
-      //@include MY\:hardware-accelerate(transform, transform-origin);
-      //@include MY\:animate(MY\:band-logo\:animation\:scale-up, $MY-animations-duration-medium);
-      //pointer-events: none;
+      .MY\:brand-logo\:text\:shell {
+        @include MY\:hardware-accelerate(padding-top);
+        padding-top: 0;
 
-      .MY\:brand-logo\:content {
-        .MY\:brand-logo\:bar-code {
-          transform: scaleY(0);
-          //@include MY\:hardware-accelerate(transform, transform-origin);
-          //@include MY\:animate(MY\:band-logo\:animation\:barcode\:scale-up, $MY-animations-duration-medium);
+        .MY\:brand-logo\:text\:letter\:expanded {
+          stroke-width: 0.2;
+          fill-opacity: 0;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
 
-          .MY\:brand-logo\:bar-code\:rectangle {
-            //@include MY\:hardware-accelerate(transform, transform-origin);
-            //@include MY\:animate(MY\:band-logo\:animation\:barcode\:rectangle\:scale-up, $MY-animations-duration-medium, backwards);
+        .MY\:brand-logo\:text\:web\:shell {
+          @include MY\:hardware-accelerate(padding-top);
+          width: 45.493%;
+
+          .MY\:brand-logo\:text\:web\:W\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 46.721%;
+          }
+
+          .MY\:brand-logo\:text\:web\:E\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 23.242%;
+          }
+
+          .MY\:brand-logo\:text\:web\:B\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 25.212%;
           }
         }
 
-        .MY\:brand-logo\:content\:text {
-          //@include MY\:hardware-accelerate(transform, transform-origin);
-          //@include MY\:animate(MY\:band-logo\:animation\:text\:padding-top\:scale-up, $MY-animations-duration-medium);
+        .MY\:brand-logo\:text\:done\:shell {
+          @include MY\:hardware-accelerate(padding-top);
+          width: 49.781%;
+
+          .MY\:brand-logo\:text\:done\:D\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 23.041%;
+          }
+
+          .MY\:brand-logo\:text\:done\:O\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 23.401%;
+          }
+
+          .MY\:brand-logo\:text\:done\:N\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 25.705%;
+          }
+
+          .MY\:brand-logo\:text\:done\:E\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 21.240%;
+          }
         }
+
       }
     }
   }
 }
-
-/*
-@keyframes MY\:band-logo\:animation\:scale-up {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(3);
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:scale-down {
-  0% {
-    transform: scale(3);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:barcode\:scale-up {
-  0% {
-    height: 0;
-  }
-
-  100% {
-    height: 66.6%;
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:barcode\:scale-down {
-  0% {
-    height: 66.6%;
-  }
-
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:barcode\:rectangle\:scale-up {
-  0% {
-    height: 0;
-  }
-
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:barcode\:rectangle\:scale-down {
-  0% {
-    height: 100%;
-  }
-
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:text\:padding-top\:scale-up {
-  0% {
-    padding-top: 0;
-  }
-
-  100% {
-    padding-top: 1.8%;
-  }
-}
-
-@keyframes MY\:band-logo\:animation\:text\:padding-top\:scale-down {
-  0% {
-    padding-top: 1.8%;
-  }
-
-  100% {
-    padding-top: 0;
-  }
-}
-*/
 </style>
