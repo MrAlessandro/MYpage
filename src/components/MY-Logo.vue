@@ -11,145 +11,55 @@
     </div>
     <div class="MY:brand-logo:content">
       <div class="MY:brand-logo:bar-code:shell">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 60" class="MY:brand-logo:bar-code"
-             :class="{'MY\:brand-logo\:bar-code\:pulse': barcodePulse}" preserveAspectRatio="none">
+        <svg ref="barCode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 60" class="MY:brand-logo:bar-code"
+             preserveAspectRatio="none">
           <title>BarCode</title>
           <g class="MY:brand-logo:bar-code:rectangles:group">
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="18.29" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="48.78" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="67.08" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="103.66" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="134.15" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="195.13" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="213.43" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="256.11" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="280.5" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="292.7" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="310.99" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="353.68" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="378.07" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="390.27" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="408.56" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="30.49" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="36.59" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="42.69" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="60.98" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="85.37" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="91.47" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="97.57" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="115.86" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="128.06" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="146.35" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="152.45" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="164.64" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="176.84" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="189.03" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="207.33" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="225.62" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="237.82" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="243.92" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="250.01" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="274.41" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="304.9" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="323.19" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="335.38" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="341.48" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="347.58" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="365.87" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="402.46" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="426.85" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle"
-                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
-                  x="432.95" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="18.29" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="48.78" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="67.08" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="103.66" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="134.15" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="195.13" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="213.43" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="256.11" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="280.5" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="292.7" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="310.99" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="353.68" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="378.07" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="390.27" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="408.56" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="30.49" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="36.59" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="42.69" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="60.98" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="85.37" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="91.47" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="97.57" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="115.86" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="128.06" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="146.35" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="152.45" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="164.64" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="176.84" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="189.03" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="207.33" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="225.62" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="237.82" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="243.92" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="250.01" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="274.41" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="304.9" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="323.19" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="335.38" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="341.48" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="347.58" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="365.87" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="402.46" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="426.85" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle" x="432.95" width="3.05" height="60"/>
           </g>
         </svg>
       </div>
@@ -240,7 +150,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive, ref, toRefs} from "vue";
+import {defineComponent, onMounted, reactive, ref, toRefs, watch} from "vue";
 
 export default defineComponent({
   props: {
@@ -255,9 +165,28 @@ export default defineComponent({
       default: false
     }
   },
-  setup() {
+  setup(props) {
     const state = reactive({
       logo: ref(),
+      barCode: ref()
+    })
+
+    const stopBarcodeAniation = (event: Event) => {
+      (event.target as Element).classList.remove('MY:brand-logo:bar-code:pulse');
+      (event.target as Element).removeEventListener('animationiteration', stopBarcodeAniation);
+    }
+
+    watch(() => props.barcodePulse, (value) => {
+      let rectangles = document.querySelectorAll('.MY\\:brand-logo\\:bar-code\\:rectangle')
+      if (value) {
+        for (let index = 0; index < rectangles.length; ++index) {
+          rectangles[index].classList.add('MY:brand-logo:bar-code:pulse')
+        }
+      } else {
+        for (let index = 0; index < rectangles.length; ++index) {
+          rectangles[index].addEventListener('animationiteration', stopBarcodeAniation)
+        }
+      }
     })
 
     const getRandomVerticalScaleValue: () => number = () => {
@@ -265,8 +194,16 @@ export default defineComponent({
     }
 
     const getRandomAnimationDuration: () => number = () => {
-      return Math.floor(Math.random() * (10 - 5 + 1) + 5) * 0.15
+      return Math.floor(Math.random() * (20 - 10 + 1) + 10) * 0.15
     }
+
+    onMounted(() => {
+      let rectangles = document.querySelectorAll('.MY\\:brand-logo\\:bar-code\\:rectangle')
+      for (let index = 0; index < rectangles.length; ++index) {
+        (rectangles[index] as HTMLElement).style.setProperty('--animation-duration', `${getRandomAnimationDuration()}s`);
+        (rectangles[index] as HTMLElement).style.setProperty('--scale-factor', `${getRandomVerticalScaleValue()}`);
+      }
+    })
 
     return {
       ...toRefs(state),
@@ -313,20 +250,28 @@ export default defineComponent({
         width: 100%;
         height: 100%;
 
-        &.MY\:brand-logo\:bar-code\:pulse {
-          .MY\:brand-logo\:bar-code\:rectangle {
+
+        .MY\:brand-logo\:bar-code\:rectangle {
+          &.MY\:brand-logo\:bar-code\:pulse {
             transform-origin: center;
-            animation: pulse var(--animation-duration) linear alternate infinite;
+            animation-name: pulse;
+            animation-duration: var(--animation-duration);
+            animation-timing-function: $MY-animations-style;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
 
             @keyframes pulse {
               0% {
-                transform: scaleY(var(--scale-factor))
+                transform: scaleY(1);
+              }
+              50% {
+                transform: scaleY(var(--scale-factor));
               }
               100% {
-                transform: scaleY(1)
+                transform: scaleY(1);
               }
             }
-
           }
         }
       }
