@@ -1,7 +1,19 @@
 <template>
   <div class="MY:container" style="text-align: right">
-    <input type="checkbox" v-model="collapse" style="margin-bottom: 50px">
-    <my-logo :collapse="collapse" style="width: 100%"/>
+    <div style="display: flex; justify-content: space-evenly; width: 100%; margin-bottom: 50px; margin-top: 50px">
+      <div>
+        <label for="barcodePulse-check">Barcode pulse</label>
+        <input id="barcodePulse-check" type="checkbox" v-model="barcodePulse" style="">
+      </div>
+      <div>
+        <label for="Ycollapse-check">Collapse vertically</label>
+        <input id="Ycollapse-check" type="checkbox" v-model="Ycollapse" style="">
+      </div>
+
+
+    </div>
+
+    <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" style="width: 100%"/>
   </div>
 </template>
 
@@ -15,7 +27,8 @@ export default defineComponent({
   },
   setup() {
     const state = reactive({
-      collapse: false
+      Ycollapse: false,
+      barcodePulse: false
     })
 
     return {

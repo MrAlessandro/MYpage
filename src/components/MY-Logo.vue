@@ -1,5 +1,5 @@
 <template>
-  <div ref="logo" class="MY:brand-logo" :class="{'MY\:brand-logo\:collapse': collapse}">
+  <div ref="logo" class="MY:brand-logo" :class="{'MY\:brand-logo\:collapse': collapseY}">
     <div class="MY:brand-logo:left-bracket:shell">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 123" class="MY:brand-logo:left-bracket">
         <title>LeftBracket</title>
@@ -12,54 +12,144 @@
     <div class="MY:brand-logo:content">
       <div class="MY:brand-logo:bar-code:shell">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 60" class="MY:brand-logo:bar-code"
-             preserveAspectRatio="none">
+             :class="{'MY\:brand-logo\:bar-code\:pulse': barcodePulse}" preserveAspectRatio="none">
           <title>BarCode</title>
           <g class="MY:brand-logo:bar-code:rectangles:group">
-            <rect class="MY:brand-logo:bar-code:rectangle" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="18.29" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="48.78" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="67.08" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="103.66" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="134.15" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="195.13" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="213.43" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="256.11" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="280.5" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="292.7" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="310.99" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="353.68" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="378.07" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="390.27" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="408.56" width="9.15" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="30.49" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="36.59" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="42.69" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="60.98" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="85.37" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="91.47" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="97.57" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="115.86" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="128.06" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="146.35" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="152.45" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="164.64" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="176.84" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="189.03" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="207.33" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="225.62" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="237.82" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="243.92" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="250.01" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="274.41" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="304.9" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="323.19" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="335.38" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="341.48" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="347.58" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="365.87" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="402.46" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="426.85" width="3.05" height="60"/>
-            <rect class="MY:brand-logo:bar-code:rectangle" x="432.95" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="18.29" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="48.78" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="67.08" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="103.66" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="134.15" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="195.13" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="213.43" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="256.11" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="280.5" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="292.7" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="310.99" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="353.68" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="378.07" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="390.27" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="408.56" width="9.15" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="30.49" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="36.59" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="42.69" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="60.98" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="85.37" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="91.47" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="97.57" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="115.86" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="128.06" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="146.35" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="152.45" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="164.64" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="176.84" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="189.03" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="207.33" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="225.62" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="237.82" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="243.92" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="250.01" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="274.41" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="304.9" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="323.19" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="335.38" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="341.48" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="347.58" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="365.87" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="402.46" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="426.85" width="3.05" height="60"/>
+            <rect class="MY:brand-logo:bar-code:rectangle"
+                  :style="{'--animation-duration': getRandomAnimationDuration() + 's', '--scale-factor': getRandomVerticalScaleValue()}"
+                  x="432.95" width="3.05" height="60"/>
           </g>
         </svg>
       </div>
@@ -154,18 +244,34 @@ import {defineComponent, reactive, ref, toRefs} from "vue";
 
 export default defineComponent({
   props: {
-    collapse: {
+    collapseY: {
       type: Boolean,
-      required: true
+      required: false,
+      default: false
     },
+    barcodePulse: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
   },
   setup() {
     const state = reactive({
       logo: ref(),
     })
 
+    const getRandomVerticalScaleValue: () => number = () => {
+      return (Math.floor(Math.random() * (10 - 4 + 1) + 4) * 0.1) - 0.1;
+    }
+
+    const getRandomAnimationDuration: () => number = () => {
+      return Math.floor(Math.random() * (10 - 5 + 1) + 5) * 0.15
+    }
+
     return {
       ...toRefs(state),
+      getRandomVerticalScaleValue,
+      getRandomAnimationDuration
     }
   }
 })
@@ -180,6 +286,7 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   align-items: center;
+  --animation-duration: 1s;
 
   .MY\:brand-logo\:left-bracket\:shell,
   .MY\:brand-logo\:right-bracket\:shell, {
@@ -205,6 +312,23 @@ export default defineComponent({
         bottom: 0;
         width: 100%;
         height: 100%;
+
+        &.MY\:brand-logo\:bar-code\:pulse {
+          .MY\:brand-logo\:bar-code\:rectangle {
+            transform-origin: center;
+            animation: pulse var(--animation-duration) linear alternate infinite;
+
+            @keyframes pulse {
+              0% {
+                transform: scaleY(var(--scale-factor))
+              }
+              100% {
+                transform: scaleY(1)
+              }
+            }
+
+          }
+        }
       }
     }
 
