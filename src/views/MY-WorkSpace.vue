@@ -9,9 +9,13 @@
         <label for="Ycollapse-check">Collapse vertically</label>
         <input id="Ycollapse-check" type="checkbox" v-model="Ycollapse" style="">
       </div>
+      <div>
+        <label for="shineText-check">Text shiny</label>
+        <input id="shineText-check" type="checkbox" v-model="shineText" style="">
+      </div>
     </div>
 
-    <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" style="width: 100%"/>
+    <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" :text-shine="shineText" style="width: 100%"/>
   </div>
 </template>
 
@@ -26,7 +30,8 @@ export default defineComponent({
   setup() {
     const state = reactive({
       Ycollapse: false,
-      barcodePulse: false
+      barcodePulse: false,
+      shineText: false
     })
 
     return {

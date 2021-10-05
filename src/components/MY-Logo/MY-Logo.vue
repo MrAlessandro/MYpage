@@ -152,6 +152,7 @@
 <script lang="ts">
 import {defineComponent, toRefs} from "vue";
 import {usePulse} from "@/components/MY-Logo/composables/usePulse";
+import variables from "@/assets/styles/_variables.scss"
 
 export default defineComponent({
   props: {
@@ -164,11 +165,19 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: false
+    },
+    textShine: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   setup(props) {
     const { barcodePulse } = toRefs(props)
     const {getRandomVerticalScaleValue, getRandomAnimationDuration} = usePulse(barcodePulse)
+
+    console.log(variables)
+
 
     return {
       getRandomVerticalScaleValue,
