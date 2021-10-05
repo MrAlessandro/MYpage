@@ -150,7 +150,8 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive, ref, toRefs, watch} from "vue";
+import {defineComponent, toRefs} from "vue";
+import {usePulse} from "@/components/MY-Logo/composables/usePulse";
 
 export default defineComponent({
   props: {
@@ -166,47 +167,10 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const state = reactive({
-      logo: ref(),
-      barCode: ref()
-    })
-
-    const stopBarcodeAniation = (event: Event) => {
-      (event.target as Element).classList.remove('MY:brand-logo:bar-code:pulse');
-      (event.target as Element).removeEventListener('animationiteration', stopBarcodeAniation);
-    }
-
-    watch(() => props.barcodePulse, (value) => {
-      let rectangles = document.querySelectorAll('.MY\\:brand-logo\\:bar-code\\:rectangle')
-      if (value) {
-        for (let index = 0; index < rectangles.length; ++index) {
-          rectangles[index].classList.add('MY:brand-logo:bar-code:pulse')
-        }
-      } else {
-        for (let index = 0; index < rectangles.length; ++index) {
-          rectangles[index].addEventListener('animationiteration', stopBarcodeAniation)
-        }
-      }
-    })
-
-    const getRandomVerticalScaleValue: () => number = () => {
-      return (Math.floor(Math.random() * (10 - 4 + 1) + 4) * 0.1) - 0.1;
-    }
-
-    const getRandomAnimationDuration: () => number = () => {
-      return Math.floor(Math.random() * (20 - 10 + 1) + 10) * 0.15
-    }
-
-    onMounted(() => {
-      let rectangles = document.querySelectorAll('.MY\\:brand-logo\\:bar-code\\:rectangle')
-      for (let index = 0; index < rectangles.length; ++index) {
-        (rectangles[index] as HTMLElement).style.setProperty('--animation-duration', `${getRandomAnimationDuration()}s`);
-        (rectangles[index] as HTMLElement).style.setProperty('--scale-factor', `${getRandomVerticalScaleValue()}`);
-      }
-    })
+    const { barcodePulse } = toRefs(props)
+    const {getRandomVerticalScaleValue, getRandomAnimationDuration} = usePulse(barcodePulse)
 
     return {
-      ...toRefs(state),
       getRandomVerticalScaleValue,
       getRandomAnimationDuration
     }
@@ -215,8 +179,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/styles/variables";
-@import "../assets/styles/mixins";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
 
 .MY\:brand-logo {
   width: 100%;

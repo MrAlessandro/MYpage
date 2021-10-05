@@ -9,8 +9,6 @@
         <label for="Ycollapse-check">Collapse vertically</label>
         <input id="Ycollapse-check" type="checkbox" v-model="Ycollapse" style="">
       </div>
-
-
     </div>
 
     <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" style="width: 100%"/>
@@ -19,7 +17,7 @@
 
 <script lang="ts">
 import {defineComponent, reactive, toRefs} from "vue";
-import MYlogo from '@/components/MY-Logo.vue'
+import MYlogo from '@/components/MY-Logo/MY-Logo.vue'
 
 export default defineComponent({
   components: {
