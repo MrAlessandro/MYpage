@@ -65,73 +65,189 @@
       </div>
       <div class="MY:brand-logo:text:shell">
         <div class="MY:brand-logo:text:web:shell">
-          <div class="MY:brand-logo:text:web:W:shell">
-            <svg class="MY:brand-logo:text:web:W" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 21.18 23.2">
+          <div class="MY:brand-logo:text:web:W:shell MY:brand-logo:text:letter">
+            <svg ref="textWebLetterW" class="MY:brand-logo:text:web:W" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 21.18 23.2">
               <title>TextWeb-W</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:web:W:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform id="MY:brand-logo:text:web:W:gradient" attributeName="gradientTransform"
+                                    ref="textAnimationWebW"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.webW}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:web:W:polygons:group">
-                <path d="M10.47,4.64,6.9,23H3.43L0,0H2.48l2.9,19.43L9.16,0h2.66L15.6,19.43,18.51,0H21L17.55,23H14.08Z"/>
+                <path fill="url(#MY:brand-logo:text:web:W:gradient)"
+                      d="M10.47,4.64,6.9,23H3.43L0,0H2.48l2.9,19.43L9.16,0h2.66L15.6,19.43,18.51,0H21L17.55,23H14.08Z"/>
               </g>
             </svg>
           </div>
-          <div class="MY:brand-logo:text:web:E:shell">
-            <svg class="MY:brand-logo:text:web:E" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 10.64 23.2">
+          <div class="MY:brand-logo:text:web:E:shell MY:brand-logo:text:letter">
+            <svg ref="textWebLetterE" class="MY:brand-logo:text:web:E" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 10.64 23.2">
               <title>TextWeb-E</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:web:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationWebE"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.webE}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:web:E:polygons:group">
-                <path d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
+                <path fill="url(#MY:brand-logo:text:web:E:gradient)"
+                      d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
               </g>
             </svg>
           </div>
-          <div class="MY:brand-logo:text:web:B:shell">
-            <svg class="MY:brand-logo:text:web:B" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.52 23.2">
+          <div class="MY:brand-logo:text:web:B:shell MY:brand-logo:text:letter">
+            <svg ref="textWebLetterB" class="MY:brand-logo:text:web:B" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 11.52 23.2">
               <title>TextWeb-B</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:web:B:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationWebB"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.webB}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:web:B:paths:group">
-                <path
-                    d="M0,23V0H5.34a9.51,9.51,0,0,1,1.6.13A6.1,6.1,0,0,1,8.47.6a4.2,4.2,0,0,1,2.38,3.11A6.51,6.51,0,0,1,11,5V7.08a3.63,3.63,0,0,1-2.51,3.85,4.56,4.56,0,0,1,1.45.67,3.37,3.37,0,0,1,1.31,2.16,5.06,5.06,0,0,1,.1,1.1v3.19a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23c-.36,0-.73.05-1.09.05Zm8.85-4.95V14.86a3,3,0,0,0-.6-1.76c-.08-.1-.16-.21-.25-.31a3,3,0,0,0-2.3-.94H2.48v9H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Zm-.36-11V5a2.67,2.67,0,0,0-.82-2V3a2.75,2.75,0,0,0-1.33-.74,4.67,4.67,0,0,0-1-.11H2.48v8H5.34a3.6,3.6,0,0,0,1-.11,2.71,2.71,0,0,0,1.34-.81,3.08,3.08,0,0,0,.63-1A2.87,2.87,0,0,0,8.49,7.08Z"/>
+                <path fill="url(#MY:brand-logo:text:web:B:gradient)"
+                      d="M0,23V0H5.34a9.51,9.51,0,0,1,1.6.13A6.1,6.1,0,0,1,8.47.6a4.2,4.2,0,0,1,2.38,3.11A6.51,6.51,0,0,1,11,5V7.08a3.63,3.63,0,0,1-2.51,3.85,4.56,4.56,0,0,1,1.45.67,3.37,3.37,0,0,1,1.31,2.16,5.06,5.06,0,0,1,.1,1.1v3.19a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23c-.36,0-.73.05-1.09.05Zm8.85-4.95V14.86a3,3,0,0,0-.6-1.76c-.08-.1-.16-.21-.25-.31a3,3,0,0,0-2.3-.94H2.48v9H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Zm-.36-11V5a2.67,2.67,0,0,0-.82-2V3a2.75,2.75,0,0,0-1.33-.74,4.67,4.67,0,0,0-1-.11H2.48v8H5.34a3.6,3.6,0,0,0,1-.11,2.71,2.71,0,0,0,1.34-.81,3.08,3.08,0,0,0,.63-1A2.87,2.87,0,0,0,8.49,7.08Z"/>
               </g>
             </svg>
-
-
           </div>
         </div>
         <div class="MY:brand-logo:text:done:shell">
-          <div class="MY:brand-logo:text:done:D:shell">
-            <svg class="MY:brand-logo:text:done:D" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.52 23.2">
+          <div class="MY:brand-logo:text:done:D:shell MY:brand-logo:text:letter">
+            <svg ref="textDoneLetterD" class="MY:brand-logo:text:done:D" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 11.52 23.2">
               <title>TextDone-D</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:done:D:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationDoneD"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.doneD}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:done:D:paths:group">
-                <path
-                    d="M5.7,23H0V0H5.7A9.39,9.39,0,0,1,7.29.13,6.18,6.18,0,0,1,8.83.6a4.19,4.19,0,0,1,1.06.71,4.28,4.28,0,0,1,1.32,2.4A5.78,5.78,0,0,1,11.32,5v13.1a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23C6.43,23,6.06,23,5.7,23Zm3.15-4.95V5A2.75,2.75,0,0,0,8,3L8,3a2.7,2.7,0,0,0-1.33-.74,4.67,4.67,0,0,0-.95-.11H2.48V20.88H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Z"/>
+                <path fill="url(#MY:brand-logo:text:done:D:gradient)"
+                      d="M5.7,23H0V0H5.7A9.39,9.39,0,0,1,7.29.13,6.18,6.18,0,0,1,8.83.6a4.19,4.19,0,0,1,1.06.71,4.28,4.28,0,0,1,1.32,2.4A5.78,5.78,0,0,1,11.32,5v13.1a6.24,6.24,0,0,1-.16,1.49,4.26,4.26,0,0,1-1.25,2.17A5.42,5.42,0,0,1,6.79,23C6.43,23,6.06,23,5.7,23Zm3.15-4.95V5A2.75,2.75,0,0,0,8,3L8,3a2.7,2.7,0,0,0-1.33-.74,4.67,4.67,0,0,0-.95-.11H2.48V20.88H5.7A3.13,3.13,0,0,0,8,20.05a2.73,2.73,0,0,0,.84-2Z"/>
               </g>
             </svg>
-
           </div>
-          <div class="MY:brand-logo:text:done:O:shell">
-            <svg class="MY:brand-logo:text:done:O" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 11.7 23.2">
+          <div class="MY:brand-logo:text:done:O:shell MY:brand-logo:text:letter">
+            <svg ref="textDoneLetterO" class=" MY:brand-logo:text:done:O" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 11.7 23.2">
               <title>TextDone-O</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:done:O:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationDoneO"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.doneO}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:done:O:paths:group">
-                <path
-                    d="M11.5,4.74V18.26a5.79,5.79,0,0,1-.17,1.44,4,4,0,0,1-1.27,2.07,5.54,5.54,0,0,1-3,1.16A10.86,10.86,0,0,1,5.77,23a6.55,6.55,0,0,1-4.32-1.23A4.1,4.1,0,0,1,.09,19.35,6.59,6.59,0,0,1,0,18.26V4.74A5.79,5.79,0,0,1,.17,3.3,4,4,0,0,1,1.44,1.23a5.54,5.54,0,0,1,3-1.16A11,11,0,0,1,5.73,0a6.55,6.55,0,0,1,4.32,1.23,4.1,4.1,0,0,1,1.36,2.42A6.59,6.59,0,0,1,11.5,4.74ZM9.13,18.26V4.74c0-1.63-.91-2.53-2.75-2.68q-.32,0-.63,0a6.32,6.32,0,0,0-1.23.11,2.4,2.4,0,0,0-2.15,2.6V18.26c0,1.63.92,2.53,2.75,2.68q.32,0,.63,0A6.32,6.32,0,0,0,7,20.86,2.4,2.4,0,0,0,9.13,18.26Z"/>
+                <path fill="url(#MY:brand-logo:text:done:O:gradient)"
+                      d="M11.5,4.74V18.26a5.79,5.79,0,0,1-.17,1.44,4,4,0,0,1-1.27,2.07,5.54,5.54,0,0,1-3,1.16A10.86,10.86,0,0,1,5.77,23a6.55,6.55,0,0,1-4.32-1.23A4.1,4.1,0,0,1,.09,19.35,6.59,6.59,0,0,1,0,18.26V4.74A5.79,5.79,0,0,1,.17,3.3,4,4,0,0,1,1.44,1.23a5.54,5.54,0,0,1,3-1.16A11,11,0,0,1,5.73,0a6.55,6.55,0,0,1,4.32,1.23,4.1,4.1,0,0,1,1.36,2.42A6.59,6.59,0,0,1,11.5,4.74ZM9.13,18.26V4.74c0-1.63-.91-2.53-2.75-2.68q-.32,0-.63,0a6.32,6.32,0,0,0-1.23.11,2.4,2.4,0,0,0-2.15,2.6V18.26c0,1.63.92,2.53,2.75,2.68q.32,0,.63,0A6.32,6.32,0,0,0,7,20.86,2.4,2.4,0,0,0,9.13,18.26Z"/>
               </g>
             </svg>
-
-
           </div>
-          <div class="MY:brand-logo:text:done:N:shell">
-            <svg class="MY:brand-logo:text:done:N" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 12.83 23.2">
+          <div class="MY:brand-logo:text:done:N:shell MY:brand-logo:text:letter">
+            <svg ref="textDoneLetterN" class=" MY:brand-logo:text:done:N" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 12.83 23.2">
               <title>TextDone-N</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:done:N:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationDoneN"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.doneN}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:done:N:polygons:group">
-                <path d="M2.48,5.31V23H0V0H2.48l7.68,17.69V0h2.47V23H10.16Z"/>
+                <path fill="url(#MY:brand-logo:text:done:N:gradient)"
+                      d="M2.48,5.31V23H0V0H2.48l7.68,17.69V0h2.47V23H10.16Z"/>
               </g>
             </svg>
-
           </div>
-          <div class="MY:brand-logo:text:done:E:shell">
-            <svg class="MY:brand-logo:text:done:E" xmlns="http://www.w3.org/2000/svg" viewBox="-0.1 -0.1 10.64 23.2">
+          <div class="MY:brand-logo:text:done:E:shell MY:brand-logo:text:letter">
+            <svg class=" MY:brand-logo:text:done:E" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="-0.1 -0.1 10.64 23.2">
               <title>TextDone-E</title>
+              <defs>
+                <linearGradient id="MY:brand-logo:text:done:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
+                                gradientTransform="translate(-1 0)">
+                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <animateTransform attributeName="gradientTransform"
+                                    ref="textAnimationDoneE"
+                                    type="translate"
+                                    from="-1 0"
+                                    to="1 0"
+                                    begin="indefinite"
+                                    :dur="`${textShiningAnimationsDurations.doneE}ms`"
+                                    repeatCount="1"/>
+                </linearGradient>
+              </defs>
               <g class="MY:brand-logo:text:done:E:polygons:group">
-                <path d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
+                <path fill="url(#MY:brand-logo:text:done:E:gradient)"
+                      d="M10.44,20.88V23H0V0H10.08V2.12H2.48v8.14H8.67v2.12H2.48v8.5Z"/>
               </g>
             </svg>
-
           </div>
         </div>
       </div>
@@ -150,8 +266,9 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, toRefs} from "vue";
+import {defineComponent, onMounted, reactive, ref, toRefs, watch} from "vue";
 import {usePulse} from "@/components/MY-Logo/composables/usePulse";
+import {useShine} from "@/components/MY-Logo/composables/useShineText";
 import variables from "@/assets/styles/_variables.scss"
 
 export default defineComponent({
@@ -173,15 +290,89 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { barcodePulse } = toRefs(props)
-    const {getRandomVerticalScaleValue, getRandomAnimationDuration} = usePulse(barcodePulse)
+    const letterShiningAnimationDuration = Number(
+        variables.MYanimationsDurationExtraLong.substring(0, variables.MYanimationsDurationExtraLong.length - 2)
+    );
 
-    console.log(variables)
+    const textShiningAnimationAdvanceFactor = letterShiningAnimationDuration * 0.4;
+    const textShiningAnimationDelayFactor = letterShiningAnimationDuration * 0.3;
 
+    const textShiningAnimationBeginWebE = letterShiningAnimationDuration - (textShiningAnimationDelayFactor * 0.6);
+    const textShiningAnimationBeginWebB = textShiningAnimationBeginWebE + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
+    const textShiningAnimationBeginDoneD = textShiningAnimationBeginWebB + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
+    const textShiningAnimationBeginDoneO = textShiningAnimationBeginDoneD + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
+    const textShiningAnimationBeginDoneN = textShiningAnimationBeginDoneO + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
+    const textShiningAnimationBeginDoneE = textShiningAnimationBeginDoneN + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
+
+
+    const {barcodePulse, textShine} = toRefs(props)
+    const state = reactive({
+      MYcolorPrimary: variables.MYcolorPrimary,
+      MYcolorDark: variables.MYcolorDark,
+      textAnimationWebW: ref(),
+      textAnimationWebE: ref(),
+      textAnimationWebB: ref(),
+      textAnimationDoneD: ref(),
+      textAnimationDoneO: ref(),
+      textAnimationDoneN: ref(),
+      textAnimationDoneE: ref(),
+      textShiningAnimationsDurations: {
+        webW: letterShiningAnimationDuration + textShiningAnimationDelayFactor,
+        webE: letterShiningAnimationDuration,
+        webB: letterShiningAnimationDuration,
+        doneD: letterShiningAnimationDuration,
+        doneO: letterShiningAnimationDuration,
+        doneN: letterShiningAnimationDuration,
+        doneE: letterShiningAnimationDuration
+      },
+      textShiningAnimationsBegins: {
+        webE: textShiningAnimationBeginWebE,
+        webB: textShiningAnimationBeginWebB,
+        doneD: textShiningAnimationBeginDoneD,
+        doneO: textShiningAnimationBeginDoneO,
+        doneN: textShiningAnimationBeginDoneN,
+        doneE: textShiningAnimationBeginDoneE
+      }
+    })
+
+    const textShiningIteration: () => void = () => {
+      state.textAnimationWebW.beginElement()
+      setTimeout(() => {
+        state.textAnimationWebE.beginElement();
+      }, state.textShiningAnimationsBegins.webE);
+      setTimeout(() => {
+        state.textAnimationWebB.beginElement();
+      }, state.textShiningAnimationsBegins.webB);
+      setTimeout(() => {
+        state.textAnimationDoneD.beginElement();
+      }, state.textShiningAnimationsBegins.doneD);
+      setTimeout(() => {
+        state.textAnimationDoneO.beginElement();
+      }, state.textShiningAnimationsBegins.doneO);
+      setTimeout(() => {
+        state.textAnimationDoneN.beginElement();
+      }, state.textShiningAnimationsBegins.doneN);
+      setTimeout(() => {
+        state.textAnimationDoneE.beginElement();
+      }, state.textShiningAnimationsBegins.doneE);
+      (state.textAnimationDoneE as HTMLElement).addEventListener('endEvent', () => {
+        if (props.textShine) {
+          textShiningIteration();
+        }
+      })
+    }
+
+    watch(() => props.textShine, (value) => {
+      if (value) {
+        textShiningIteration();
+      }
+    })
 
     return {
-      getRandomVerticalScaleValue,
-      getRandomAnimationDuration
+      textShiningIteration,
+      ...toRefs(state),
+      ...usePulse(barcodePulse),
+      ...useShine(textShine)
     }
   }
 })
@@ -260,7 +451,6 @@ export default defineComponent({
       transition: padding-top $MY-animations-duration-extra-long $MY-animations-style;
 
       .MY\:brand-logo\:text\:letter {
-        fill: $MY-color-primary;
         stroke: $MY-color-primary;
         stroke-width: 0;
         fill-opacity: 1;
@@ -276,17 +466,14 @@ export default defineComponent({
         transition: width $MY-animations-duration-extra-long $MY-animations-style;
 
         .MY\:brand-logo\:text\:web\:W\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 19.365%;
         }
 
         .MY\:brand-logo\:text\:web\:E\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 9.633%;
         }
 
         .MY\:brand-logo\:text\:web\:B\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 10.449%;
         }
       }
@@ -298,22 +485,18 @@ export default defineComponent({
         transition: width $MY-animations-duration-extra-long $MY-animations-style;
 
         .MY\:brand-logo\:text\:done\:D\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 7.300%;
         }
 
         .MY\:brand-logo\:text\:done\:O\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 7.415%;
         }
 
         .MY\:brand-logo\:text\:done\:N\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 8.144%;
         }
 
         .MY\:brand-logo\:text\:done\:E\:shell {
-          @extend .MY\:brand-logo\:text\:letter;
           width: 6.730%;
         }
       }
@@ -335,7 +518,7 @@ export default defineComponent({
 
         .MY\:brand-logo\:text\:letter\:expanded {
           stroke-width: 0.2;
-          fill-opacity: 0;
+          //fill-opacity: 0;
           stroke-linecap: round;
           stroke-linejoin: round;
         }
