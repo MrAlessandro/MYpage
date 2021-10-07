@@ -72,9 +72,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:W:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform id="MY:brand-logo:text:web:W:gradient" attributeName="gradientTransform"
                                     ref="textAnimationWebW"
                                     type="translate"
@@ -98,9 +98,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationWebE"
                                     type="translate"
@@ -124,9 +124,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:B:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationWebB"
                                     type="translate"
@@ -152,9 +152,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:D:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationDoneD"
                                     type="translate"
@@ -178,9 +178,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:O:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationDoneO"
                                     type="translate"
@@ -204,9 +204,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:N:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationDoneN"
                                     type="translate"
@@ -230,9 +230,9 @@
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
                                 gradientTransform="translate(-1 0)">
-                  <stop offset="0%" :style="{'stop-color': MYcolorPrimary}"/>
-                  <stop offset="50%" :style="{'stop-color': MYcolorDark}"/>
-                  <stop offset="100%" :style="{'stop-color': MYcolorPrimary}"/>
+                  <stop offset="0%" :style="{'stop-color': colorPrimary}"/>
+                  <stop offset="50%" :style="{'stop-color': colorDark}"/>
+                  <stop offset="100%" :style="{'stop-color': colorPrimary}"/>
                   <animateTransform attributeName="gradientTransform"
                                     ref="textAnimationDoneE"
                                     type="translate"
@@ -266,10 +266,9 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive, ref, toRefs, watch} from "vue";
+import {defineComponent, toRefs} from "vue";
 import {usePulse} from "@/components/MY-Logo/composables/usePulse";
 import {useShine} from "@/components/MY-Logo/composables/useShineText";
-import variables from "@/assets/styles/_variables.scss"
 
 export default defineComponent({
   props: {
@@ -290,87 +289,9 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const letterShiningAnimationDuration = Number(
-        variables.MYanimationsDurationExtraLong.substring(0, variables.MYanimationsDurationExtraLong.length - 2)
-    );
-
-    const textShiningAnimationAdvanceFactor = letterShiningAnimationDuration * 0.4;
-    const textShiningAnimationDelayFactor = letterShiningAnimationDuration * 0.3;
-
-    const textShiningAnimationBeginWebE = letterShiningAnimationDuration - (textShiningAnimationDelayFactor * 0.6);
-    const textShiningAnimationBeginWebB = textShiningAnimationBeginWebE + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
-    const textShiningAnimationBeginDoneD = textShiningAnimationBeginWebB + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
-    const textShiningAnimationBeginDoneO = textShiningAnimationBeginDoneD + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
-    const textShiningAnimationBeginDoneN = textShiningAnimationBeginDoneO + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
-    const textShiningAnimationBeginDoneE = textShiningAnimationBeginDoneN + letterShiningAnimationDuration - textShiningAnimationAdvanceFactor;
-
-
-    const {barcodePulse, textShine} = toRefs(props)
-    const state = reactive({
-      MYcolorPrimary: variables.MYcolorPrimary,
-      MYcolorDark: variables.MYcolorDark,
-      textAnimationWebW: ref(),
-      textAnimationWebE: ref(),
-      textAnimationWebB: ref(),
-      textAnimationDoneD: ref(),
-      textAnimationDoneO: ref(),
-      textAnimationDoneN: ref(),
-      textAnimationDoneE: ref(),
-      textShiningAnimationsDurations: {
-        webW: letterShiningAnimationDuration + textShiningAnimationDelayFactor,
-        webE: letterShiningAnimationDuration,
-        webB: letterShiningAnimationDuration,
-        doneD: letterShiningAnimationDuration,
-        doneO: letterShiningAnimationDuration,
-        doneN: letterShiningAnimationDuration,
-        doneE: letterShiningAnimationDuration
-      },
-      textShiningAnimationsBegins: {
-        webE: textShiningAnimationBeginWebE,
-        webB: textShiningAnimationBeginWebB,
-        doneD: textShiningAnimationBeginDoneD,
-        doneO: textShiningAnimationBeginDoneO,
-        doneN: textShiningAnimationBeginDoneN,
-        doneE: textShiningAnimationBeginDoneE
-      }
-    })
-
-    const textShiningIteration: () => void = () => {
-      state.textAnimationWebW.beginElement()
-      setTimeout(() => {
-        state.textAnimationWebE.beginElement();
-      }, state.textShiningAnimationsBegins.webE);
-      setTimeout(() => {
-        state.textAnimationWebB.beginElement();
-      }, state.textShiningAnimationsBegins.webB);
-      setTimeout(() => {
-        state.textAnimationDoneD.beginElement();
-      }, state.textShiningAnimationsBegins.doneD);
-      setTimeout(() => {
-        state.textAnimationDoneO.beginElement();
-      }, state.textShiningAnimationsBegins.doneO);
-      setTimeout(() => {
-        state.textAnimationDoneN.beginElement();
-      }, state.textShiningAnimationsBegins.doneN);
-      setTimeout(() => {
-        state.textAnimationDoneE.beginElement();
-      }, state.textShiningAnimationsBegins.doneE);
-      (state.textAnimationDoneE as HTMLElement).addEventListener('endEvent', () => {
-        if (props.textShine) {
-          textShiningIteration();
-        }
-      }, {once: true});
-    }
-
-    watch(() => props.textShine, (value) => {
-      if (value) {
-        textShiningIteration();
-      }
-    })
+    const {barcodePulse, textShine} = toRefs(props);
 
     return {
-      textShiningIteration,
-      ...toRefs(state),
       ...usePulse(barcodePulse),
       ...useShine(textShine)
     }
