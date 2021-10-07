@@ -5,7 +5,7 @@ export interface useShineData {
     getTextShineAnimation: (idPrefix: string, index: number) => string;
 }
 
-export const useShine: (shine: Ref<boolean>) => usePulseData = (shine) => {
+export const useShine: (shine: Ref<boolean>) => useShineData = (shine) => {
     /*const state = reactive({
         textWebLetterW: ref(),
         textWebLetterE: ref(),

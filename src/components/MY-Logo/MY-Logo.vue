@@ -359,7 +359,7 @@ export default defineComponent({
         if (props.textShine) {
           textShiningIteration();
         }
-      })
+      }, {once: true});
     }
 
     watch(() => props.textShine, (value) => {
