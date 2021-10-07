@@ -12,7 +12,6 @@ export const usePulse: (pulse: Ref<boolean>) => usePulseData = (pulse) => {
     }
 
     watch(pulse, (value) => {
-        console.log('Prop changed')
         const rectangles = document.querySelectorAll('.MY\\:brand-logo\\:bar-code\\:rectangle')
         if (value) {
             for (let index = 0; index < rectangles.length; ++index) {
