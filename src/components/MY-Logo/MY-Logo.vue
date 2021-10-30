@@ -1,5 +1,8 @@
 <template>
-  <div ref="logo" class="MY:brand-logo" :class="{'MY\:brand-logo\:collapse': collapseY}">
+  <div ref="logo" class="MY:brand-logo" :class="{
+    'MY\:brand-logo\:collapse-Y': collapseY,
+    'MY\:brand-logo\:collapse-X': collapseX,
+  }">
     <div class="MY:brand-logo:left-bracket:shell">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 123" class="MY:brand-logo:left-bracket">
         <title>LeftBracket</title>
@@ -277,6 +280,11 @@ export default defineComponent({
       required: false,
       default: false
     },
+    collapseX: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     barcodePulse: {
       type: Boolean,
       required: false,
@@ -426,7 +434,7 @@ export default defineComponent({
 
   /* COLLAPSED STYLE */
   // TODO: Rivedere Hardware acceleration
-  &.MY\:brand-logo\:collapse {
+  &.MY\:brand-logo\:collapse-Y {
     .MY\:brand-logo\:content {
       .MY\:brand-logo\:bar-code\:shell {
         @include MY\:hardware-accelerate(padding-top);
