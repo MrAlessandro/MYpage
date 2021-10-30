@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" :text-shine="shineText" :collapse-X="Xcollapse" style="width: 100%"/>
+    <my-logo :collapse-y="Ycollapse" :barcode-pulse="barcodePulse" :text-shine="shineText" :collapse-X="Xcollapse"/>
   </div>
 </template>
 

@@ -70,7 +70,7 @@
         <div class="MY:brand-logo:text:web:shell">
           <div class="MY:brand-logo:text:web:W:shell MY:brand-logo:text:letter">
             <svg ref="textWebLetterW" class="MY:brand-logo:text:web:W" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 21.18 23.2">
+                 viewBox="-0.1 -0.1 21.18 23.2" preserveAspectRatio="none">
               <title>TextWeb-W</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:W:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -96,7 +96,7 @@
           </div>
           <div class="MY:brand-logo:text:web:E:shell MY:brand-logo:text:letter">
             <svg ref="textWebLetterE" class="MY:brand-logo:text:web:E" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 10.64 23.2">
+                 viewBox="-0.1 -0.1 10.64 23.2" preserveAspectRatio="none">
               <title>TextWeb-E</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -122,7 +122,7 @@
           </div>
           <div class="MY:brand-logo:text:web:B:shell MY:brand-logo:text:letter">
             <svg ref="textWebLetterB" class="MY:brand-logo:text:web:B" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 11.52 23.2">
+                 viewBox="-0.1 -0.1 11.52 23.2" preserveAspectRatio="none">
               <title>TextWeb-B</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:web:B:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -150,7 +150,7 @@
         <div class="MY:brand-logo:text:done:shell">
           <div class="MY:brand-logo:text:done:D:shell MY:brand-logo:text:letter">
             <svg ref="textDoneLetterD" class="MY:brand-logo:text:done:D" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 11.52 23.2">
+                 viewBox="-0.1 -0.1 11.52 23.2" preserveAspectRatio="none">
               <title>TextDone-D</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:D:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -176,7 +176,7 @@
           </div>
           <div class="MY:brand-logo:text:done:O:shell MY:brand-logo:text:letter">
             <svg ref="textDoneLetterO" class=" MY:brand-logo:text:done:O" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 11.7 23.2">
+                 viewBox="-0.1 -0.1 11.7 23.2" preserveAspectRatio="none">
               <title>TextDone-O</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:O:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -202,7 +202,7 @@
           </div>
           <div class="MY:brand-logo:text:done:N:shell MY:brand-logo:text:letter">
             <svg ref="textDoneLetterN" class=" MY:brand-logo:text:done:N" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 12.83 23.2">
+                 viewBox="-0.1 -0.1 12.83 23.2" preserveAspectRatio="none">
               <title>TextDone-N</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:N:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -228,7 +228,7 @@
           </div>
           <div class="MY:brand-logo:text:done:E:shell MY:brand-logo:text:letter">
             <svg class=" MY:brand-logo:text:done:E" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="-0.1 -0.1 10.64 23.2">
+                 viewBox="-0.1 -0.1 10.64 23.2" preserveAspectRatio="none">
               <title>TextDone-E</title>
               <defs>
                 <linearGradient id="MY:brand-logo:text:done:E:gradient" x1="0%" y1="0%" x2="100%" y2="0"
@@ -314,18 +314,21 @@ export default defineComponent({
 .MY\:brand-logo {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   --animation-duration: 1s;
+  transition: width $MY-animations-duration-extra-long $MY-animations-style;
 
   .MY\:brand-logo\:left-bracket\:shell,
   .MY\:brand-logo\:right-bracket\:shell, {
     width: 6.400%;
     fill: $MY-color-primary;
+    transition: width $MY-animations-duration-extra-long $MY-animations-style;
   }
 
   .MY\:brand-logo\:content {
     width: 87.200%;
+    transition: width $MY-animations-duration-extra-long $MY-animations-style;
 
     .MY\:brand-logo\:bar-code\:shell {
       position: relative;
@@ -396,14 +399,26 @@ export default defineComponent({
 
         .MY\:brand-logo\:text\:web\:W\:shell {
           width: 19.365%;
+
+          .MY\:brand-logo\:text\:web\:W {
+            height: 100%;
+          }
         }
 
         .MY\:brand-logo\:text\:web\:E\:shell {
           width: 9.633%;
+
+          .MY\:brand-logo\:text\:web\:E {
+            height: 100%;
+          }
         }
 
         .MY\:brand-logo\:text\:web\:B\:shell {
           width: 10.449%;
+
+          .MY\:brand-logo\:text\:web\:B {
+            height: 100%;
+          }
         }
       }
 
@@ -415,18 +430,35 @@ export default defineComponent({
 
         .MY\:brand-logo\:text\:done\:D\:shell {
           width: 7.300%;
+
+          .MY\:brand-logo\:text\:done\:D {
+            height: 100%;
+
+          }
         }
 
         .MY\:brand-logo\:text\:done\:O\:shell {
           width: 7.415%;
+
+          .MY\:brand-logo\:text\:done\:O {
+            height: 100%;
+          }
         }
 
         .MY\:brand-logo\:text\:done\:N\:shell {
           width: 8.144%;
+
+          .MY\:brand-logo\:text\:done\:N {
+            height: 100%;
+          }
         }
 
         .MY\:brand-logo\:text\:done\:E\:shell {
           width: 6.730%;
+
+          .MY\:brand-logo\:text\:done\:E {
+            height: 100%;
+          }
         }
       }
     }
@@ -500,5 +532,82 @@ export default defineComponent({
       }
     }
   }
+
+  &.MY\:brand-logo\:collapse-X {
+    width: 41.768%;
+
+    .MY\:brand-logo\:left-bracket\:shell,
+    .MY\:brand-logo\:right-bracket\:shell, {
+      width: 15.322%;
+    }
+
+    .MY\:brand-logo\:content {
+      width: 68.838%;
+
+      .MY\:brand-logo\:bar-code\:shell {
+        @include MY\:hardware-accelerate(padding-top);
+        padding-top: 0;
+      }
+
+      .MY\:brand-logo\:text\:shell {
+        @include MY\:hardware-accelerate(padding-top);
+        padding-top: 0;
+
+        .MY\:brand-logo\:text\:letter\:expanded {
+          stroke-width: 0.2;
+          //fill-opacity: 0;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .MY\:brand-logo\:text\:web\:shell {
+          @include MY\:hardware-accelerate(padding-top);
+          width: 58.857%;
+
+          .MY\:brand-logo\:text\:web\:W\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 100%;
+          }
+
+          .MY\:brand-logo\:text\:web\:E\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 0;
+          }
+
+          .MY\:brand-logo\:text\:web\:B\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 0;
+          }
+        }
+
+        .MY\:brand-logo\:text\:done\:shell {
+          @include MY\:hardware-accelerate(padding-top);
+          width: 32.100%;
+
+          .MY\:brand-logo\:text\:done\:D\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 100%;
+          }
+
+          .MY\:brand-logo\:text\:done\:O\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 0;
+          }
+
+          .MY\:brand-logo\:text\:done\:N\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 0;
+          }
+
+          .MY\:brand-logo\:text\:done\:E\:shell {
+            @extend .MY\:brand-logo\:text\:letter\:expanded;
+            width: 0;
+          }
+        }
+
+      }
+    }
+  }
+
 }
 </style>
